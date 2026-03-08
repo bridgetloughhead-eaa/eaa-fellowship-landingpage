@@ -7,12 +7,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Calendar, Clock, Users, MapPin, BookOpen, Lightbulb, GraduationCap, Handshake, Quote, Check, ChevronDown, Plus, Minus } from 'lucide-react';
 import { siteContent } from './content';
-import photo0234 from './assets/photos/0234.jpg';
-import awfulBetter from './assets/photos/awful-better.png';
-import photo0221 from './assets/photos/0221.jpg';
-import photoKevin from './assets/photos/kevin.png';
-import photo0086 from './assets/photos/0086.jpg';
-import photo0129 from './assets/photos/0129.jpg';
+import photo0234 from './assets/0234.jpg';
+import awfulBetter from './assets/awful-better.png';
+import photo0221 from './assets/0221.jpg';
+import photoKevin from './assets/kevin.png';
+import photo0086 from './assets/0086.jpg';
+import photo0129 from './assets/0129.jpg';
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
