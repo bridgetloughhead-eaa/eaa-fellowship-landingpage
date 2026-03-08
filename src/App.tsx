@@ -7,6 +7,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Calendar, Clock, Users, MapPin, BookOpen, Lightbulb, GraduationCap, Handshake, Quote, Check, ChevronDown, Plus, Minus } from 'lucide-react';
 import { siteContent } from './content';
+import photo0234 from './assets/photos/0234.jpg';
+import awfulBetter from './assets/photos/awful-better.png';
+import photo0221 from './assets/photos/0221.jpg';
+import photoKevin from './assets/photos/kevin.png';
+import photo0086 from './assets/photos/0086.jpg';
+import photo0129 from './assets/photos/0129.jpg';
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -44,7 +50,7 @@ export default function App() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-eaa-warm-100">
           <img 
-            src="/photos/0234.jpg" 
+            src={photo0234} 
             alt="Contemplative person" 
             className="absolute right-0 top-0 h-full w-full md:w-[85%] lg:w-[75%] xl:w-[65%] object-cover object-center opacity-30 md:opacity-60 lg:opacity-80 grayscale-[0.6]"
             style={{ 
@@ -116,7 +122,7 @@ export default function App() {
               
               <div className="py-4">
                 <img 
-                  src="/photos/awful-better.png" 
+                  src={awfulBetter} 
                   alt="Venn diagram: The world is awful, The world is much better, The world can be much better" 
                   className="w-full max-w-2xl mx-auto"
                 />
@@ -163,7 +169,7 @@ export default function App() {
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
-                src="/photos/0221.jpg" 
+                src={photo0221} 
                 alt="Group discussion" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
@@ -264,12 +270,12 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
-                src="/photos/kevin.png" 
+                src={photoKevin} 
                 alt="Kevin Rassool" 
                 className="w-full h-full object-cover grayscale-[0.3]"
                 onError={(e) => {
                   // Fallback if kevin.jpg doesn't exist
-                  (e.target as HTMLImageElement).src = "/photos/0086.jpg";
+                  (e.target as HTMLImageElement).src = photo0086;
                 }}
               />
             </div>
@@ -322,7 +328,7 @@ export default function App() {
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200 order-1 md:order-2">
               <img 
-                src="/photos/0129.jpg" 
+                src={photo0129} 
                 alt="Community event" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
