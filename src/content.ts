@@ -6,7 +6,7 @@ export const siteContent = {
     logoWhite: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-white.svg",
   },
   navigation: {
-    applyButton: "Apply Now",
+    applyButton: "Apply for the Fellowship",
   },
   hero: {
     staggeredText: [
@@ -17,7 +17,7 @@ export const siteContent = {
       "And what you could",
       "do about them."
     ],
-    description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of likeminded people.",
+    description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of like-minded people.",
     applyButton: "Apply for the Fellowship",
     closingDate: "Applications close March 31",
   },
@@ -27,11 +27,12 @@ export const siteContent = {
     citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
     citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
-    paragraphHtml: "You probably believe that. But knowing the world <em>could</em> be better and knowing what <em>you</em> should do about it are very different things. Most people never find a good place to think it through."
+    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through."
   },
   theSyllabus: {
     title: "The syllabus",
-    description1: "For six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group, and talk it through.",
+    description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by our trained volunteer facilitators, and talk it through.",
+    curriculumCredit: "The syllabus draws on a curriculum used by effective altruism groups around the world.",
     topicsTitle: "What you'll explore:",
     topics: [
       "Why some ways of doing good are 100x more effective than others",
@@ -46,14 +47,9 @@ export const siteContent = {
   howItWorks: {
     title: "How it works",
     steps: [
-      { step: 1, title: "Apply", desc: "Closes March 31." },
-      { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 that fits your schedule." },
-      { step: 3, title: "Show up", desc: "One 90-minute session a week, April 13 to May 20." }
-    ],
-    logistics: [
-      "About an hour of reading beforehand",
-      "Melbourne, Sydney, Brisbane or online",
-      "Free"
+      { step: 1, title: "Apply", desc: "Tell us a bit about yourself and pick the times that work. Applications close March 31." },
+      { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
+      { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. April 13 to May 20. Free." }
     ],
     note: "No prior knowledge needed. That's what the six weeks are for."
   },
@@ -61,8 +57,7 @@ export const siteContent = {
     title: "Who's behind this",
     paragraphs: [
       "We're Effective Altruism Australia, a nonprofit that's been running community programs since 2022. We've seen what happens when someone gets the right framework at the right time: careers shift, giving changes, people find a community that thinks the way they do.",
-      "The syllabus draws on a curriculum used by effective altruism groups around the world. This fellowship exists because really thinking things through takes time and discussion.",
-      "It's free because we're funded by donations from people who believe these ideas should be accessible to everyone. No upsell, no catch."
+      "It's free because our programs are funded by the Centre for Effective Altruism, a global organisation that supports EA community building worldwide."
     ]
   },
   testimonial: {
@@ -75,13 +70,12 @@ export const siteContent = {
     items: [
       { title: "1:1 career advising", desc: "to talk through your options with someone who knows the landscape", link: "https://eaa.org.au/1-to-1" },
       { title: "EAGxAustralasia", desc: "our flagship annual conference for the effective altruism community in Australia and New Zealand" },
-      { title: "Local events and meetups", desc: "to keep the conversation going in your city" },
-      { title: "A community", desc: "of people who care about the same things you do" }
+      { title: "Local events and meetups", desc: "to keep the conversation going in your city", link: "https://effectivealtruism.org.au/get-involved/local-community/" }
     ]
   },
   finalCta: {
     dateRange: "April 13 to May 20, 2026",
-    title: "Six weeks could change how you think about the next sixty years.",
+    title: "Six weeks could change how you think about making a difference.",
     applyButton: "Apply for the Fellowship",
     secondaryText: "Not sure yet?",
     secondaryLinkText: "Sign up for our newsletter →",
@@ -91,10 +85,6 @@ export const siteContent = {
     title: "Frequently Asked Questions",
     items: [
       {
-        q: "Do I need to know anything about effective altruism?",
-        a: "The fellowship is built around the question \"how can we do the most good?\" If that question interests you, you're ready."
-      },
-      {
         q: "Will I be the only one who's new to this?",
         a: "Most people who join have never been involved in EA. You'll be in good company."
       },
@@ -103,18 +93,14 @@ export const siteContent = {
         a: "That's welcome. The best discussions come from different perspectives."
       },
       {
-        q: "How much time does it take?",
-        a: "About 2.5 hours a week: one hour of reading, 90 minutes of discussion."
-      },
-      {
         q: "Is it really free?",
         a: "Yes. EAA is a nonprofit. We run this because we think these questions matter."
-      },
-      {
-        q: "What happens after?",
-        a: "You're welcome to stay connected: join the community, come to events, or request a 1:1 advising call."
       }
     ]
+  },
+  contact: {
+    text: "Questions? Email us at",
+    email: "bridget.loughhead@eaa.org.au"
   },
   footer: {
     contact: {

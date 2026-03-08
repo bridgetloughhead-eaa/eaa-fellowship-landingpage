@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Calendar, Clock, Users, MapPin, BookOpen, Lightbulb, GraduationCap, Handshake, Quote, Check, ChevronDown, Plus, Minus, Mail, Phone } from 'lucide-react';
+import { ArrowRight, MapPin, Quote, Plus, Minus, Mail, Phone } from 'lucide-react';
 import { siteContent } from './content';
 import photo0234 from './assets/0234.jpg';
 import awfulBetter from './assets/awful-better.png';
@@ -48,7 +48,7 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] flex items-center py-16">
+      <section className="relative w-full min-h-[85vh] flex items-center py-16 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-eaa-warm-100">
           <img 
@@ -72,7 +72,7 @@ export default function App() {
             className="max-w-3xl"
           >
             {/* Staggered text blocks mimicking the social post */}
-            <div className="font-serif text-3xl md:text-4xl lg:text-[42px] leading-none text-white tracking-tight flex flex-col items-start">
+            <div className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-none text-white tracking-tight flex flex-col items-start">
               <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[0]}</span>
               <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[1]}</span>
               <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[2]}</span>
@@ -90,7 +90,7 @@ export default function App() {
                   href={siteContent.links.applyForm} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-fit inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-8 py-4 text-lg font-medium hover:bg-eaa-teal-900 transition-colors duration-200 shadow-sm"
+                  className="w-fit max-w-full inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-medium hover:bg-eaa-teal-900 transition-colors duration-200 shadow-sm"
                 >
                   {siteContent.hero.applyButton}
                   <ArrowRight className="w-5 h-5" />
@@ -132,21 +132,21 @@ export default function App() {
 
               <div className="text-base md:text-lg text-eaa-neutral-950/70">
                 — {siteContent.theGap.citationAuthor},{" "}
-                <a 
-                  href={siteContent.theGap.citationLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:text-eaa-teal-700 transition-colors italic underline underline-offset-4"
-                >
+                <span className="italic">
                   {siteContent.theGap.citationTitle}
-                </a>{" "}
-                <span className="underline decoration-1 underline-offset-4">{siteContent.theGap.citationSource}</span>
+                </span>{" "}
+                <a
+                  href={siteContent.theGap.citationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-1 underline-offset-4 hover:text-eaa-teal-700 transition-colors"
+                >{siteContent.theGap.citationSource}</a>
               </div>
             </div>
 
-            <p 
-              className="text-eaa-neutral-950"
-              dangerouslySetInnerHTML={{ __html: siteContent.theGap.paragraphHtml }}
+            <div
+              className="text-eaa-neutral-950 space-y-6 [&_p]:leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: `<p>${siteContent.theGap.paragraphHtml}</p>` }}
             />
           </div>
         </motion.section>
@@ -164,9 +164,6 @@ export default function App() {
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
               <p className="text-lg md:text-xl leading-relaxed">
                 {siteContent.theSyllabus.description1}
-              </p>
-              <p className="text-eaa-neutral-950">
-                {siteContent.theSyllabus.description2}
               </p>
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
@@ -189,6 +186,11 @@ export default function App() {
               ))}
             </ul>
           </div>
+
+          <div className="space-y-4">
+            <p className="text-lg leading-relaxed">{siteContent.theSyllabus.curriculumCredit}</p>
+            <p className="text-eaa-neutral-950">{siteContent.theSyllabus.description2}</p>
+          </div>
         </motion.section>
 
         {/* How It Works Section */}
@@ -203,37 +205,19 @@ export default function App() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {siteContent.howItWorks.steps.map((item) => (
-              <div key={item.step} className="space-y-4">
-                <div className="w-10 h-10 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center font-bold font-serif">
+              <div key={item.step} className="flex flex-col items-center text-center space-y-4">
+                <div className="w-12 h-12 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center text-lg font-bold font-serif">
                   {item.step}
                 </div>
-                <h4 className="font-serif text-xl text-eaa-teal-900">{item.step}. {item.title}</h4>
+                <h4 className="font-serif text-xl font-bold text-eaa-teal-900">{item.title}</h4>
                 <p className="text-eaa-neutral-950">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="pt-12 border-t border-eaa-warm-200">
-            <div className="space-y-6">
-              <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-lg">
-                <li className="flex items-center gap-4">
-                  <BookOpen className="w-5 h-5 text-eaa-teal-900 shrink-0" />
-                  <span>{siteContent.howItWorks.logistics[0]}</span>
-                </li>
-                <li className="flex items-center gap-4">
-                  <MapPin className="w-5 h-5 text-eaa-teal-900 shrink-0" />
-                  <span>{siteContent.howItWorks.logistics[1]}</span>
-                </li>
-                <li className="flex items-center gap-4">
-                  <Check className="w-5 h-5 text-eaa-teal-900 shrink-0" />
-                  <span className="font-medium">{siteContent.howItWorks.logistics[2]}</span>
-                </li>
-              </ul>
-              <p className="text-eaa-neutral-950 italic">
-                {siteContent.howItWorks.note}
-              </p>
-            </div>
-          </div>
+          <p className="text-center text-eaa-neutral-950 italic">
+            {siteContent.howItWorks.note}
+          </p>
         </motion.section>
 
       </main>
@@ -270,7 +254,7 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12 bg-eaa-warm-50 p-8 md:p-12 border border-eaa-warm-200"
+          className="space-y-12 bg-eaa-warm-50 p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
@@ -377,13 +361,13 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12 pb-24"
+          className="space-y-12 pb-12"
         >
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.faq.title}</h2>
           <div className="grid gap-4">
             {siteContent.faq.items.map((faq, i) => (
               <div key={i} className="border border-eaa-warm-200 bg-white overflow-hidden">
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-eaa-warm-50 transition-colors"
                 >
@@ -408,6 +392,13 @@ export default function App() {
             ))}
           </div>
         </motion.section>
+
+        <p className="text-center text-eaa-neutral-950/70 pb-24">
+          {siteContent.contact.text}{" "}
+          <a href={`mailto:${siteContent.contact.email}`} className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
+            {siteContent.contact.email}
+          </a>
+        </p>
 
       </main>
       
