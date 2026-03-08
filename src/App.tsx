@@ -159,6 +159,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
+          <hr className="border-eaa-warm-200" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
@@ -201,6 +202,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
+          <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.howItWorks.title}</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -220,43 +222,45 @@ export default function App() {
           </p>
         </motion.section>
 
-      </main>
-
-      {/* Who's Behind This Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-        className="bg-eaa-neutral-700 text-eaa-warm-100 py-24 px-8"
-      >
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <h2 className="font-serif text-2xl md:text-3xl">{siteContent.whosBehindThis.title}</h2>
-            <img
-              src={logoWhite}
-              alt="Effective Altruism Australia"
-              className="h-10 md:h-12 opacity-90"
-            />
-          </div>
-          <div className="space-y-6 text-lg text-eaa-warm-100/80 leading-relaxed max-w-3xl">
-            {siteContent.whosBehindThis.paragraphs.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      <main className="max-w-4xl mx-auto px-8 py-24 space-y-32">
-        {/* Testimonial Section */}
-        <motion.section 
+        {/* Who's Behind This Section */}
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12 bg-eaa-warm-50 p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden"
+          className="space-y-12"
         >
+          <hr className="border-eaa-warm-200" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
+              <div className="space-y-6 text-lg text-eaa-neutral-950 leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
+                {siteContent.whosBehindThis.paragraphsHtml.map((html, i) => (
+                  <p key={i} dangerouslySetInnerHTML={{ __html: html }} />
+                ))}
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <a href={siteContent.links.mainWebsite} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={logoFullColour}
+                  alt="Effective Altruism Australia"
+                  className="w-full max-w-xs opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </a>
+            </div>
+          </div>
+        </motion.section>
+        {/* Testimonial Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="space-y-12"
+        >
+          <hr className="border-eaa-warm-200" />
+          <div className="bg-eaa-warm-50 p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photoKevin} 
@@ -286,13 +290,14 @@ export default function App() {
         </motion.section>
 
         {/* What Comes Next Section */}
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
+          <hr className="border-eaa-warm-200" />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 order-2 md:order-1">
               <h2 className="text-3xl md:text-4xl font-serif text-eaa-teal-900 leading-tight">
@@ -363,6 +368,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-12 pb-12"
         >
+          <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.faq.title}</h2>
           <div className="grid gap-4">
             {siteContent.faq.items.map((faq, i) => (

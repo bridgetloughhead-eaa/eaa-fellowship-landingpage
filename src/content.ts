@@ -55,9 +55,9 @@ export const siteContent = {
   },
   whosBehindThis: {
     title: "Who's behind this",
-    paragraphs: [
-      "We're Effective Altruism Australia, a nonprofit that's been running community programs since 2022. We've seen what happens when someone gets the right framework at the right time: careers shift, giving changes, people find a community that thinks the way they do.",
-      "It's free because our programs are funded by the Centre for Effective Altruism, a global organisation that supports EA community building worldwide."
+    paragraphsHtml: [
+      "We're <a href=\"https://effectivealtruism.org.au\" target=\"_blank\" rel=\"noopener noreferrer\">Effective Altruism Australia</a>, a nonprofit that's been running community programs since 2022. We've seen what happens when someone gets the right framework at the right time: careers shift, giving changes, people find a community that thinks the way they do.",
+      "It's free because our programs are funded by the <a href=\"https://www.effectivealtruism.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Centre for Effective Altruism</a>, a global organisation that supports EA community building worldwide."
     ]
   },
   testimonial: {
