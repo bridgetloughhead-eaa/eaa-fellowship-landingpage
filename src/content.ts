@@ -17,7 +17,7 @@ export const siteContent = {
       "And what you could",
       "do about them."
     ],
-    description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of like-minded people.",
+    description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of curious people.",
     applyButton: "Apply for the Fellowship",
     closingDate: "Applications close March 31",
   },
@@ -31,8 +31,8 @@ export const siteContent = {
   },
   theSyllabus: {
     title: "The syllabus",
-    description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by our trained volunteer facilitators, and talk it through.",
-    curriculumCredit: "The syllabus draws on a curriculum used by effective altruism groups around the world.",
+    description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by volunteer facilitators, and talk it through.",
+    curriculumCreditHtml: "The syllabus draws on the <a href=\"https://www.effectivealtruism.org/courses/introductory-program\" target=\"_blank\" rel=\"noopener noreferrer\">Introductory EA Program</a>, a curriculum developed by the Centre for Effective Altruism and used by groups around the world.",
     topicsTitle: "What you'll explore:",
     topics: [
       "Why some ways of doing good are 100x more effective than others",
@@ -51,12 +51,12 @@ export const siteContent = {
       { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
       { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. April 13 to May 20. Free." }
     ],
-    note: "No prior knowledge needed. That's what the six weeks are for."
+    note: ""
   },
   whosBehindThis: {
     title: "Who's behind this",
     paragraphsHtml: [
-      "We're <a href=\"https://effectivealtruism.org.au\" target=\"_blank\" rel=\"noopener noreferrer\">Effective Altruism Australia</a>, a nonprofit that's been running community programs since 2022. We've seen what happens when someone gets the right framework at the right time: careers shift, giving changes, people find a community that thinks the way they do.",
+      "We're <a href=\"https://effectivealtruism.org.au\" target=\"_blank\" rel=\"noopener noreferrer\">Effective Altruism Australia</a>, a nonprofit that's been running community programs since 2022. We've seen what happens when people get the space to think this through: careers shift, giving changes, people find a community they didn't know existed.",
       "It's free because our programs are funded by the <a href=\"https://www.effectivealtruism.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Centre for Effective Altruism</a>, a global organisation that supports EA community building worldwide."
     ]
   },
@@ -75,7 +75,7 @@ export const siteContent = {
   },
   finalCta: {
     dateRange: "April 13 to May 20, 2026",
-    title: "Six weeks could change how you think about making a difference.",
+    title: "Six weeks could change how you think about doing good.",
     applyButton: "Apply for the Fellowship",
     secondaryText: "Not sure yet?",
     secondaryLinkText: "Sign up for our newsletter →",
@@ -90,7 +90,7 @@ export const siteContent = {
       },
       {
         q: "What if I disagree with some of the ideas?",
-        a: "That's welcome. The best discussions come from different perspectives."
+        a: "That's welcome. The readings present strong arguments, but the discussions are genuinely exploratory. Past cohorts have included people who challenged the ideas throughout, and those were often the best conversations."
       },
       {
         q: "Is it really free?",

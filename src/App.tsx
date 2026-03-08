@@ -189,7 +189,7 @@ export default function App() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-lg leading-relaxed">{siteContent.theSyllabus.curriculumCredit}</p>
+            <p className="text-lg leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors" dangerouslySetInnerHTML={{ __html: siteContent.theSyllabus.curriculumCreditHtml }} />
             <p className="text-eaa-neutral-950">{siteContent.theSyllabus.description2}</p>
           </div>
         </motion.section>
@@ -217,9 +217,11 @@ export default function App() {
             ))}
           </div>
 
-          <p className="text-center text-eaa-neutral-950 italic">
-            {siteContent.howItWorks.note}
-          </p>
+          {siteContent.howItWorks.note && (
+            <p className="text-center text-eaa-neutral-950 italic">
+              {siteContent.howItWorks.note}
+            </p>
+          )}
         </motion.section>
 
         {/* Who's Behind This Section */}
