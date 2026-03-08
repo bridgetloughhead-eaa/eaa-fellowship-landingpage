@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# EAA Fellowship Landing Page
 
-# Run and deploy your AI Studio app
+Landing page for the Effective Altruism Australia Intro to EA Fellowship.
 
-This contains everything you need to run your app locally.
+## Development
 
-View your app in AI Studio: https://ai.studio/apps/9afd1297-2889-4e1a-b7fb-1a3bdcf98d12
+**Prerequisites:** Node.js
 
-## Run Locally
+1. Install dependencies: `npm install`
+2. Start dev server: `npm run dev`
+3. Open http://localhost:3000
 
-**Prerequisites:**  Node.js
+## Editing content
 
+All site copy is in `src/content.ts`. Edit that file to change text, links, dates, or FAQ items.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Build and deploy
+
+The site deploys to GitHub Pages automatically on push to `main` via `.github/workflows/deploy.yml`.
+
+To build locally: `npm run build`
