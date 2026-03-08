@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Mukta:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Merriweather", serif;
+  --font-sans: "Mukta", sans-serif;
+  
+  --color-eaa-warm-50: #f9f6f3;
+  --color-eaa-warm-100: #F4EFE9;
+  --color-eaa-warm-200: #e2d4c6;
+  
+  --color-eaa-teal-700: #0C869B;
+  --color-eaa-teal-900: #145565;
+  
+  --color-eaa-neutral-950: #151515;
+  
+  --color-eaa-bronze-500: #ad7f62;
+}
+
+body {
+  background-color: var(--color-eaa-warm-100);
+  color: var(--color-eaa-neutral-950);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
