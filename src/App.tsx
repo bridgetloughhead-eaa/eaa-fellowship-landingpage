@@ -236,31 +236,34 @@ export default function App() {
           </div>
         </motion.section>
 
-        {/* Who's Behind This Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8 py-12"
-        >
-          <div className="max-w-3xl space-y-8">
-            <div className="flex flex-wrap items-center gap-4 md:gap-6">
-              <h2 className="font-serif text-2xl md:text-3xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
-              <img 
-                src={logoFullColour} 
-                alt="Effective Altruism Australia" 
-                className="h-10 md:h-12 opacity-90"
-              />
-            </div>
-            <div className="space-y-6 text-lg text-eaa-neutral-950 leading-relaxed">
-              {siteContent.whosBehindThis.paragraphs.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-        </motion.section>
+      </main>
 
+      {/* Who's Behind This Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="bg-eaa-neutral-700 text-eaa-warm-100 py-24 px-8"
+      >
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="flex flex-wrap items-center gap-4 md:gap-6">
+            <h2 className="font-serif text-2xl md:text-3xl">{siteContent.whosBehindThis.title}</h2>
+            <img
+              src={logoWhite}
+              alt="Effective Altruism Australia"
+              className="h-10 md:h-12 opacity-90"
+            />
+          </div>
+          <div className="space-y-6 text-lg text-eaa-warm-100/80 leading-relaxed max-w-3xl">
+            {siteContent.whosBehindThis.paragraphs.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      <main className="max-w-4xl mx-auto px-8 py-24 space-y-32">
         {/* Testimonial Section */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
