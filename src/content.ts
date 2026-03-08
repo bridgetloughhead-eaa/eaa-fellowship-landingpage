@@ -117,6 +117,28 @@ export const siteContent = {
     ]
   },
   footer: {
-    copyright: "© 2026 Effective Altruism Australia"
+    contact: {
+      email: "info@eaa.org.au",
+      phone: "0492 841 596",
+      address: "PO Box 550 Doncaster Victoria 3108",
+    },
+    social: [
+      { name: "LinkedIn", url: "https://au.linkedin.com/company/effective-altruism-australia" },
+      { name: "Facebook", url: "https://www.facebook.com/effectivealtruismaustralia" },
+      { name: "YouTube", url: "https://www.youtube.com/channel/UCB7RsmYLb7QhsxIGISsqnew" },
+      { name: "X", url: "https://twitter.com/EA_Aus" },
+    ],
+    keyPages: [
+      { label: "Other Ways to Donate", url: "https://effectivealtruism.org.au/other-ways-to-donate/" },
+      { label: "Best Charities", url: "https://effectivealtruism.org.au/best-charities/" },
+      { label: "Get Involved", url: "https://effectivealtruism.org.au/get-involved/" },
+      { label: "Learn More", url: "https://effectivealtruism.org.au/latest-news-and-resources/" },
+      { label: "About Us", url: "https://effectivealtruism.org.au/about-us/" },
+      { label: "Contact Us", url: "https://effectivealtruism.org.au/contact/" },
+    ],
+    legalTextHtml: 'Effective Altruism Australia (<a href="https://www.acnc.gov.au/charity/charities?search=87608863467" target="_blank" rel="noopener noreferrer">ABN 87 608 863 467</a>) and Effective Altruism Australia Environment (<a href="https://www.acnc.gov.au/charity/charities?search=57659447417" target="_blank" rel="noopener noreferrer">ABN 57 659 447 417</a>) are endorsed as Deductible Gift Recipients by the Australian Taxation Office. Donations of $2 or more are tax deductible in Australia.',
+    copyright: "© 2026 Effective Altruism Australia. All rights reserved.",
+    privacyPolicy: "https://effectivealtruism.org.au/privacy-policy",
+    terms: "https://effectivealtruism.org.au/terms",
   }
 };
