@@ -411,6 +411,19 @@ export default function App() {
 
       </main>
       
+      {/* Sticky mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-eaa-warm-200 px-4 py-3">
+        <a
+          href={siteContent.links.applyForm}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full bg-eaa-teal-700 text-white py-3 text-base font-medium hover:bg-eaa-teal-900 transition-colors"
+        >
+          {siteContent.hero.applyButton}
+          <ArrowRight className="w-4 h-4" />
+        </a>
+      </div>
+
       {/* Footer */}
       <footer className="bg-eaa-neutral-700 text-eaa-neutral-200">
         <div className="max-w-6xl mx-auto px-8 py-16">
