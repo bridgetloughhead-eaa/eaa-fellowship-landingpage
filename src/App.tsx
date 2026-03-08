@@ -46,10 +46,14 @@ export default function App() {
           <img 
             src="/photos/0234.jpg" 
             alt="Contemplative person" 
-            className="w-full h-full object-cover object-left-top scale-[1.4] origin-left opacity-80 grayscale-[0.1]"
+            className="absolute right-0 top-0 h-full w-full md:w-[85%] lg:w-[75%] xl:w-[65%] object-cover object-center opacity-30 md:opacity-60 lg:opacity-80 grayscale-[0.6]"
+            style={{ 
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)',
+              maskImage: 'linear-gradient(to right, transparent, black 20%)'
+            }}
           />
-          {/* Gradient to ensure text readability on the left and blend with white background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-eaa-warm-100 via-eaa-warm-100/60 to-transparent w-full"></div>
+          {/* Gradient to ensure text readability on the left and blend with background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-eaa-warm-100 from-40% md:from-30% lg:from-20% via-eaa-warm-100/60 to-transparent w-full"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-8 w-full">
@@ -101,20 +105,37 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-8 py-12"
         >
-          <div className="space-y-8 text-lg md:text-2xl leading-relaxed max-w-3xl">
-            <div className="space-y-4">
-              <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
-                {siteContent.theGap.quote}
-              </h2>
-              <a 
-                href={siteContent.theGap.citationLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block text-base md:text-lg text-eaa-neutral-950/70 hover:text-eaa-teal-700 transition-colors"
-              >
-                {siteContent.theGap.citation}
-              </a>
+          <div className="space-y-12 text-lg md:text-2xl leading-relaxed max-w-3xl">
+            <div className="space-y-8">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <Quote className="w-12 h-12 text-eaa-bronze-500 opacity-20 scale-x-[-1] mb-4" />
+                <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
+                  {siteContent.theGap.quote}
+                </h2>
+              </div>
+              
+              <div className="py-4">
+                <img 
+                  src="/photos/awful-better.png" 
+                  alt="Venn diagram: The world is awful, The world is much better, The world can be much better" 
+                  className="w-full max-w-2xl mx-auto"
+                />
+              </div>
+
+              <div className="text-base md:text-lg text-eaa-neutral-950/70">
+                — {siteContent.theGap.citationAuthor},{" "}
+                <a 
+                  href={siteContent.theGap.citationLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-eaa-teal-700 transition-colors italic underline underline-offset-4"
+                >
+                  {siteContent.theGap.citationTitle}
+                </a>{" "}
+                <span className="underline decoration-1 underline-offset-4">{siteContent.theGap.citationSource}</span>
+              </div>
             </div>
+
             <p 
               className="text-eaa-neutral-950"
               dangerouslySetInnerHTML={{ __html: siteContent.theGap.paragraphHtml }}
@@ -142,7 +163,7 @@ export default function App() {
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
-                src="/photos/0078.jpg" 
+                src="/photos/0221.jpg" 
                 alt="Group discussion" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
@@ -216,13 +237,13 @@ export default function App() {
           className="space-y-8 py-12"
         >
           <div className="max-w-3xl space-y-8">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 md:gap-6">
+              <h2 className="font-serif text-2xl md:text-3xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
               <img 
                 src={siteContent.links.logoFullColor} 
                 alt="Effective Altruism Australia" 
-                className="h-8 opacity-80"
+                className="h-10 md:h-12 opacity-90"
               />
-              <h2 className="font-serif text-2xl md:text-3xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
             </div>
             <div className="space-y-6 text-lg text-eaa-neutral-950 leading-relaxed">
               {siteContent.whosBehindThis.paragraphs.map((paragraph, i) => (
@@ -243,7 +264,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
-                src="/photos/kevin.jpg" 
+                src="/photos/kevin.png" 
                 alt="Kevin Rassool" 
                 className="w-full h-full object-cover grayscale-[0.3]"
                 onError={(e) => {
@@ -257,7 +278,7 @@ export default function App() {
                 {siteContent.testimonial.title}
               </h2>
               <div className="relative pl-12 py-4 border-l-2 border-eaa-bronze-500 italic text-xl text-eaa-teal-900 font-serif">
-                <Quote className="absolute left-0 top-0 w-8 h-8 text-eaa-bronze-500 opacity-20" />
+                <Quote className="absolute left-0 top-0 w-8 h-8 text-eaa-bronze-500 opacity-20 scale-x-[-1]" />
                 <p>
                   {siteContent.testimonial.quote}
                 </p>
@@ -288,7 +309,7 @@ export default function App() {
                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-eaa-bronze-500 shrink-0" />
                     <p className="text-lg leading-relaxed">
                       {item.link ? (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-eaa-teal-900 font-bold hover:underline">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-eaa-teal-900 font-bold underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
                           {item.title}
                         </a>
                       ) : (
@@ -333,7 +354,7 @@ export default function App() {
                 <ArrowRight className="w-6 h-6" />
               </a>
               <p className="text-eaa-warm-100/80">
-                {siteContent.finalCta.secondaryText} <a href={siteContent.finalCta.secondaryLinkUrl} className="underline hover:text-white transition-colors">{siteContent.finalCta.secondaryLinkText}</a>
+                {siteContent.finalCta.secondaryText} <a href={siteContent.finalCta.secondaryLinkUrl} className="underline underline-offset-4 hover:text-white transition-colors">{siteContent.finalCta.secondaryLinkText}</a>
               </p>
             </div>
           </div>

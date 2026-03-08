@@ -22,8 +22,10 @@ export const siteContent = {
     closingDate: "Applications close March 31",
   },
   theGap: {
-    quote: "\"The world is awful. The world is much better. The world can be much better.\"",
-    citation: "— Our World in Data",
+    quote: "The world is awful. The world is much better. The world can be much better.",
+    citationAuthor: "Max Roser",
+    citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
+    citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
     paragraphHtml: "You probably believe that. But knowing the world <em>could</em> be better and knowing what <em>you</em> should do about it are very different things. Most people never find a good place to think it through."
   },
@@ -65,7 +67,7 @@ export const siteContent = {
   },
   testimonial: {
     title: "What past fellows say",
-    quote: "\"I'd been thinking about these ideas for a while. The fellowship was an amazing place to meet other people, ask questions, and it gave me the confidence to dive into a career change.\"",
+    quote: "I'd been thinking about these ideas for a while. The fellowship was an amazing place to meet other people, ask questions, and it gave me the confidence to dive into a career change.",
     citation: "— Kevin Rassool, Operations, Strategy & Community Building @ High Impact Athletes"
   },
   whatComesNext: {
@@ -79,7 +81,7 @@ export const siteContent = {
   },
   finalCta: {
     dateRange: "April 13 to May 20, 2026",
-    title: "Six weeks could change how you think about the next sixty years. Or you could keep wondering.",
+    title: "Six weeks could change how you think about the next sixty years.",
     applyButton: "Apply for the Fellowship",
     secondaryText: "Not sure yet?",
     secondaryLinkText: "Sign up for our newsletter →",
