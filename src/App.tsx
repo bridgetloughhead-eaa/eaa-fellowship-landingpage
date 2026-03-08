@@ -145,7 +145,7 @@ export default function App() {
             </div>
 
             <div
-              className="text-eaa-neutral-950 space-y-6 [&_p]:leading-relaxed"
+              className="text-eaa-neutral-950 space-y-6 text-base md:text-lg [&_p]:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: `<p>${siteContent.theGap.paragraphHtml}</p>` }}
             />
           </div>
