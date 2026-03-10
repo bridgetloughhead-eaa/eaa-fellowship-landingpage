@@ -100,7 +100,7 @@ export const siteContent = {
   },
   contact: {
     text: "Questions? Email us at",
-    email: "bridget.loughhead@eaa.org.au"
+    email: "community@eaa.org.au"
   },
   footer: {
     contact: {
