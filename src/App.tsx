@@ -23,7 +23,7 @@ export default function App() {
     <div className="min-h-screen bg-eaa-warm-100 font-sans text-eaa-neutral-950 selection:bg-eaa-teal-900 selection:text-white">
       {/* Navigation */}
       <header className="w-full bg-eaa-warm-50 relative z-50">
-        <nav className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
+        <nav className="max-w-7xl mx-auto px-6 lg:px-16 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <a href={siteContent.links.mainWebsite} target="_blank" rel="noopener noreferrer">
               <img 
@@ -64,7 +64,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-r from-eaa-warm-100 from-40% md:from-30% lg:from-20% via-eaa-warm-100/60 to-transparent w-full"></div>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-8 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export default function App() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-8 py-24 space-y-32">
+      <main className="max-w-7xl mx-auto px-6 lg:px-16 py-24 space-y-24 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
         
         {/* The Gap Section */}
         <motion.section 
@@ -111,44 +111,42 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-8 py-12"
+          className="space-y-8"
         >
-          <div className="space-y-12 text-lg md:text-2xl leading-relaxed max-w-3xl">
-            <div className="space-y-8">
-              <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <Quote className="w-12 h-12 text-eaa-bronze-500 opacity-20 scale-x-[-1] mb-4" />
-                <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
-                  {siteContent.theGap.quote}
-                </h2>
-              </div>
-              
-              <div className="py-4">
-                <img 
-                  src={awfulBetter} 
-                  alt="Venn diagram: The world is awful, The world is much better, The world can be much better" 
-                  className="w-full max-w-2xl mx-auto"
-                />
-              </div>
-
-              <div className="text-base md:text-lg text-eaa-neutral-950/70">
-                — {siteContent.theGap.citationAuthor},{" "}
-                <span className="italic">
-                  {siteContent.theGap.citationTitle}
-                </span>{" "}
-                <a
-                  href={siteContent.theGap.citationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-1 underline-offset-4 hover:text-eaa-teal-700 transition-colors"
-                >{siteContent.theGap.citationSource}</a>
-              </div>
+          <div className="bg-white py-10 px-12 border border-eaa-warm-200 space-y-8">
+            <div className="flex flex-col items-center text-center">
+              <Quote className="w-12 h-12 text-eaa-bronze-500 opacity-20 scale-x-[-1] mb-4 self-start" />
+              <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
+                The world is awful. The world is much better.<br />The world can be much better.
+              </h2>
             </div>
 
-            <div
-              className="text-eaa-neutral-950 space-y-6 text-base md:text-lg [&_p]:leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: `<p>${siteContent.theGap.paragraphHtml}</p>` }}
-            />
+            <div className="py-4">
+              <img
+                src={awfulBetter}
+                alt="Venn diagram: The world is awful, The world is much better, The world can be much better"
+                className="w-full max-w-2xl mx-auto"
+              />
+            </div>
+
+            <div className="text-lg text-eaa-neutral-950/70 text-center">
+              — {siteContent.theGap.citationAuthor},{" "}
+              <span className="italic">
+                {siteContent.theGap.citationTitle}
+              </span>{" "}
+              <a
+                href={siteContent.theGap.citationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-1 underline-offset-4 hover:text-eaa-teal-700 transition-colors"
+              >{siteContent.theGap.citationSource}</a>
+            </div>
           </div>
+
+          <div
+            className="space-y-6"
+            dangerouslySetInnerHTML={{ __html: `<p>${siteContent.theGap.paragraphHtml}</p>` }}
+          />
         </motion.section>
 
         {/* The Syllabus Section */}
@@ -163,9 +161,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
-              <p className="text-lg md:text-xl leading-relaxed">
-                {siteContent.theSyllabus.description1}
-              </p>
+              <p>{siteContent.theSyllabus.description1}</p>
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
@@ -176,21 +172,20 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-white p-8 border border-eaa-warm-200">
+          <div className="bg-white py-10 px-12 border border-eaa-warm-200">
             <h3 className="font-serif text-2xl text-eaa-teal-900 mb-6">{siteContent.theSyllabus.topicsTitle}</h3>
-            <ul className="grid md:grid-cols-2 gap-x-12 gap-y-4 text-lg">
+            <ul className="grid md:grid-cols-2 gap-x-12 gap-y-4 list-disc marker:text-eaa-bronze-500 pl-6">
               {siteContent.theSyllabus.topics.map((topic, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-eaa-bronze-500 mt-1.5">•</span>
-                  <span>{topic}</span>
+                <li key={i}>
+                  {topic}
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="space-y-4">
-            <p className="text-lg leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors" dangerouslySetInnerHTML={{ __html: siteContent.theSyllabus.curriculumCreditHtml }} />
-            <p className="text-eaa-neutral-950">{siteContent.theSyllabus.description2}</p>
+            <p className="[&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors" dangerouslySetInnerHTML={{ __html: siteContent.theSyllabus.curriculumCreditHtml }} />
+            <p>{siteContent.theSyllabus.description2}</p>
           </div>
         </motion.section>
 
@@ -205,20 +200,20 @@ export default function App() {
           <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.howItWorks.title}</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {siteContent.howItWorks.steps.map((item) => (
               <div key={item.step} className="flex flex-col items-center text-center space-y-4">
                 <div className="w-12 h-12 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center text-lg font-bold font-serif">
                   {item.step}
                 </div>
                 <h4 className="font-serif text-xl font-bold text-eaa-teal-900">{item.title}</h4>
-                <p className="text-eaa-neutral-950">{item.desc}</p>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
 
           {siteContent.howItWorks.note && (
-            <p className="text-center text-eaa-neutral-950 italic">
+            <p className="text-center italic">
               {siteContent.howItWorks.note}
             </p>
           )}
@@ -236,7 +231,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
-              <div className="space-y-6 text-lg text-eaa-neutral-950 leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
+              <div className="space-y-6 [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
                 {siteContent.whosBehindThis.paragraphsHtml.map((html, i) => (
                   <p key={i} dangerouslySetInnerHTML={{ __html: html }} />
                 ))}
@@ -262,7 +257,7 @@ export default function App() {
           className="space-y-12"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="bg-eaa-warm-50 p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-white p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden grid md:grid-cols-2 gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photoKevin} 
@@ -309,7 +304,7 @@ export default function App() {
                 {siteContent.whatComesNext.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-eaa-bronze-500 shrink-0" />
-                    <p className="text-lg leading-relaxed">
+                    <p>
                       {item.link ? (
                         <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-eaa-teal-900 font-bold underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
                           {item.title}
@@ -338,7 +333,6 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="pt-16"
         >
           <div className="bg-eaa-teal-900 text-white p-8 md:p-16 rounded-sm shadow-xl text-center space-y-8">
             <div className="space-y-4">
@@ -368,7 +362,7 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12 pb-12"
+          className="space-y-12"
         >
           <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.faq.title}</h2>
@@ -390,7 +384,7 @@ export default function App() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="px-6 pb-6 text-eaa-neutral-950 leading-relaxed">
+                      <div className="px-6 pb-6 leading-relaxed">
                         {faq.a}
                       </div>
                     </motion.div>
@@ -401,7 +395,7 @@ export default function App() {
           </div>
         </motion.section>
 
-        <p className="text-center text-eaa-neutral-950/70 pb-24">
+        <p className="text-center text-eaa-teal-900 font-medium py-6 border-t border-b border-eaa-warm-200">
           {siteContent.contact.text}{" "}
           <a href={`mailto:${siteContent.contact.email}`} className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
             {siteContent.contact.email}
@@ -424,11 +418,11 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-eaa-neutral-700 text-eaa-neutral-200">
-        <div className="max-w-6xl mx-auto px-8 py-16">
+      <footer className="bg-eaa-neutral-700 text-eaa-neutral-200 text-base md:text-lg">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {/* Left column: Logo + legal */}
-            <div className="space-y-8">
+            <div className="space-y-12">
               <a href={siteContent.links.mainWebsite} target="_blank" rel="noopener noreferrer">
                 <img
                   src={logoWhite}
@@ -437,7 +431,7 @@ export default function App() {
                 />
               </a>
               <p
-                className="text-xs text-eaa-neutral-200/70 leading-relaxed [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-white [&_a]:transition-colors"
+                className="text-sm text-eaa-neutral-200/70 leading-relaxed [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-white [&_a]:transition-colors"
                 dangerouslySetInnerHTML={{ __html: siteContent.footer.legalTextHtml }}
               />
             </div>
@@ -445,7 +439,7 @@ export default function App() {
             {/* Middle column: Contact + social */}
             <div className="space-y-6">
               <h3 className="font-serif text-lg text-white border-b border-eaa-teal-700 pb-2 w-fit">Contact Information</h3>
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-eaa-teal-700 mt-0.5 shrink-0" />
                   <span className="text-eaa-neutral-200">{siteContent.footer.contact.address}</span>
@@ -489,7 +483,7 @@ export default function App() {
             {/* Right column: Key Pages */}
             <div className="space-y-6">
               <h3 className="font-serif text-lg text-white border-b border-eaa-teal-700 pb-2 w-fit">Key Pages</h3>
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-3">
                 {siteContent.footer.keyPages.map((page) => (
                   <li key={page.label}>
                     <a href={page.url} target="_blank" rel="noopener noreferrer" className="text-eaa-neutral-200 hover:text-white transition-colors underline underline-offset-4 decoration-eaa-neutral-200/20">
@@ -504,7 +498,7 @@ export default function App() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10">
-          <div className="max-w-6xl mx-auto px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-eaa-neutral-200/60">
+          <div className="max-w-7xl mx-auto px-6 lg:px-16 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-eaa-neutral-200/60">
             <span>{siteContent.footer.copyright}</span>
             <div className="flex gap-4">
               <a href={siteContent.footer.privacyPolicy} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
