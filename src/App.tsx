@@ -113,7 +113,7 @@ export default function App() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 lg:px-16 py-24 space-y-24 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
+      <main className="max-w-7xl mx-auto px-6 lg:px-16 py-12 md:py-20 space-y-12 md:space-y-20 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
         
         {/* The Gap Section */}
         <motion.section 
@@ -159,16 +159,33 @@ export default function App() {
           />
         </motion.section>
 
+        {/* Why EA Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="space-y-8 md:space-y-10"
+        >
+          <hr className="border-eaa-warm-200" />
+          <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.whyEa.title}</h2>
+          <div className="space-y-6 [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
+            {siteContent.whyEa.paragraphs.map((p, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+            ))}
+          </div>
+        </motion.section>
+
         {/* The Syllabus Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             <div className="space-y-6">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
               <p>{siteContent.theSyllabus.description1}</p>
@@ -205,12 +222,12 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.howItWorks.title}</h2>
-          
-          <div className="grid md:grid-cols-3 gap-12">
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {siteContent.howItWorks.steps.map((item) => (
               <div key={item.step} className="flex flex-col items-center text-center space-y-4">
                 <div className="w-12 h-12 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center text-lg font-bold font-serif">
@@ -235,11 +252,11 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-6">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.whosBehindThis.title}</h2>
               <div className="space-y-6 [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
                 {siteContent.whosBehindThis.paragraphsHtml.map((html, i) => (
@@ -264,10 +281,10 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="bg-white p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-white p-4 sm:p-8 md:p-12 border border-eaa-warm-200 overflow-hidden grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photoKevin} 
@@ -302,11 +319,11 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 order-2 md:order-1">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-6 order-2 md:order-1">
               <h2 className="text-3xl md:text-4xl font-serif text-eaa-teal-900 leading-tight">
                 {siteContent.whatComesNext.title}
               </h2>
@@ -372,7 +389,7 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
           <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.faq.title}</h2>

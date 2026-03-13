@@ -27,10 +27,19 @@ export const siteContent = {
     citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
     citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
-    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The Intro to EA Fellowship is six weeks of structured space to think it through, with people asking the same questions."
+    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The <strong>Intro to Effective Altruism Fellowship</strong> is six weeks of structured space to think it through, with people asking the same questions."
+  },
+  whyEa: {
+    title: "Why effective altruism?",
+    paragraphs: [
+      "Most of us want to make a difference. But how much of a difference can one person actually make?",
+      "It turns out: a lot more than you think — if you're strategic about it. Some ways of doing good are literally a hundred times more effective than others. The best charities save lives for a fraction of what others spend. Career choices that seem similar can differ enormously in impact.",
+      "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking that seriously — using evidence and careful thinking to find the best ways to help others, and then actually doing them. It's not an ideology. It's a question: given what we have, how do we do the most good?",
+      "The fellowship is where that question gets specific."
+    ]
   },
   theSyllabus: {
-    title: "The syllabus",
+    title: "What the EA Fellowship covers",
     description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by volunteer facilitators, and talk it through.",
     curriculumCreditHtml: "The syllabus draws on the <a href=\"https://www.effectivealtruism.org/courses/introductory-program\" target=\"_blank\" rel=\"noopener noreferrer\">Introductory EA Program</a>, a curriculum developed by the Centre for Effective Altruism and used by groups around the world.",
     topicsTitle: "What you'll explore:",
