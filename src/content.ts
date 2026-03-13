@@ -19,7 +19,7 @@ export const siteContent = {
     ],
     description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of curious people.",
     applyButton: "Apply for the Fellowship",
-    closingDate: "Applications close March 31",
+    closingDate: "Applications close April 5",
   },
   theGap: {
     quote: "The world is awful. The world is much better. The world can be much better.",
@@ -56,7 +56,7 @@ export const siteContent = {
   howItWorks: {
     title: "How it works",
     steps: [
-      { step: 1, title: "Apply", desc: "Tell us a bit about yourself and pick the times that work. Applications close March 31." },
+      { step: 1, title: "Apply", desc: "Tell us a bit about yourself and pick the times that work. Applications close April 5." },
       { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
       { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. April 13 to May 20. Free." }
     ],
