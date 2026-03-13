@@ -123,35 +123,21 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <div className="bg-white py-8 px-6 sm:py-10 sm:px-12 border border-eaa-warm-200 space-y-8">
-            <div className="flex flex-col items-center text-center">
-              <Quote className="w-12 h-12 text-eaa-bronze-500 opacity-20 scale-x-[-1] mb-4 self-start" />
-              <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
-                The world is awful. The world is much better.<br />The world can be much better.
-              </h2>
-            </div>
-
-            <div className="py-4">
-              <img
-                src={awfulBetter}
-                alt="Venn diagram: The world is awful, The world is much better, The world can be much better"
-                className="w-full max-w-2xl mx-auto"
-              />
-            </div>
-
-            <div className="text-lg text-eaa-neutral-950/70 text-center">
+          <blockquote className="relative pl-8 md:pl-12 border-l-2 border-eaa-bronze-500">
+            <Quote className="absolute left-0 -top-1 w-6 h-6 text-eaa-bronze-500 opacity-20 scale-x-[-1]" />
+            <p className="font-serif text-eaa-teal-900 text-2xl md:text-3xl leading-snug italic">
+              The world is awful. The world is much better. The world can be much better.
+            </p>
+            <cite className="block mt-3 text-base not-italic text-eaa-neutral-950/60">
               — {siteContent.theGap.citationAuthor},{" "}
-              <span className="italic">
-                {siteContent.theGap.citationTitle}
-              </span>{" "}
               <a
                 href={siteContent.theGap.citationLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-1 underline-offset-4 hover:text-eaa-teal-700 transition-colors"
               >{siteContent.theGap.citationSource}</a>
-            </div>
-          </div>
+            </cite>
+          </blockquote>
 
           <div
             className="space-y-6"
