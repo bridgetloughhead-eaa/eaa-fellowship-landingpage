@@ -22,12 +22,12 @@ export default function App() {
   return (
     <div className="min-h-screen bg-eaa-warm-100 font-sans text-eaa-neutral-950 selection:bg-eaa-teal-900 selection:text-white">
       {/* Navigation - transparent overlay on hero */}
-      <header className="absolute top-0 left-0 w-full z-50">
+      <header className="w-full z-50 bg-white">
         <nav className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
           <div className="flex items-center">
             <a href={siteContent.links.mainWebsite} target="_blank" rel="noopener noreferrer">
               <img
-                src={logoWhite}
+                src={logoFullColour}
                 alt="Effective Altruism Australia"
                 className="h-10 md:h-12"
               />
@@ -38,7 +38,7 @@ export default function App() {
               href={siteContent.links.applyForm}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm text-white border border-white/25 px-6 py-2.5 text-base font-medium hover:bg-white/25 transition-colors duration-200"
+              className="hidden md:inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-base font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
             >
               {siteContent.navigation.applyButton}
               <ArrowRight className="w-4 h-4" />
@@ -57,48 +57,52 @@ export default function App() {
           <img
             src={photo0234}
             alt="Contemplative person at an event"
-            className="absolute right-0 top-0 h-full w-full md:w-[80%] lg:w-[70%] object-cover object-center"
+            className="absolute right-0 top-0 h-full w-full md:w-[80%] lg:w-[70%] object-cover object-[30%_center] md:object-center"
             style={{
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
               maskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
             }}
           />
           {/* Teal wash over photo */}
-          <div className="absolute inset-0 bg-[#145565]/35"></div>
+          <div className="absolute inset-0 bg-[#145565]/55 md:bg-[#145565]/35"></div>
         </div>
 
         {/* Text content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full pt-28 pb-16 md:pt-20 md:pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full pt-12 pb-16 md:pt-16 md:pb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-sm md:max-w-md"
+            className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
           >
-            <h1 className="font-serif italic text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight mb-5">
+            <h1 className="font-serif font-bold italic text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight mb-5">
               What if
             </h1>
 
-            <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-[28px] leading-relaxed text-white/90 font-light mb-8">
-              you spent six weeks thinking about the<br />
-              <span className="relative inline-block px-2 py-0.5 font-normal">
-                <span className="absolute inset-0 bg-eaa-teal-700 -skew-x-3 rotate-[-1deg] rounded-[2px]" aria-hidden="true"></span>
+            <p className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-snug text-white font-bold mb-8">
+              you spent six weeks<br />
+              thinking about the<br />
+              <span className="relative inline-block px-1.5 py-0.5">
+                <span className="absolute inset-x-0 top-[25%] bottom-[18%] bg-eaa-teal-700 -skew-x-3 rotate-[-1deg] rounded-[2px]" aria-hidden="true"></span>
                 <span className="relative">world's biggest</span>
-              </span><br />
-              <span className="relative inline-block px-2 py-0.5 font-normal">
-                <span className="absolute inset-0 bg-eaa-teal-700 skew-x-2 rotate-[0.6deg] rounded-[2px]" aria-hidden="true"></span>
+              </span>
+              <br />
+              <span className="relative inline-block px-1.5 py-0.5">
+                <span className="absolute inset-x-0 top-[25%] bottom-[18%] bg-eaa-teal-700 skew-x-2 rotate-[0.6deg] rounded-[2px]" aria-hidden="true"></span>
                 <span className="relative">problems</span>
               </span>{' '}
-              and<br />what you could do about them?
+              and<br />
+              what you could do<br />
+              about them?
             </p>
 
             <div className="space-y-4">
-              <p className="text-white font-bold text-lg md:text-xl">Free 6-week fellowship</p>
+              <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">Free 6-week fellowship</p>
               <a
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-base font-medium hover:bg-eaa-teal-900 transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
               >
                 Applications open
                 <ArrowRight className="w-5 h-5" />
@@ -119,7 +123,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          <div className="bg-white py-10 px-12 border border-eaa-warm-200 space-y-8">
+          <div className="bg-white py-8 px-6 sm:py-10 sm:px-12 border border-eaa-warm-200 space-y-8">
             <div className="flex flex-col items-center text-center">
               <Quote className="w-12 h-12 text-eaa-bronze-500 opacity-20 scale-x-[-1] mb-4 self-start" />
               <h2 className="font-serif text-eaa-teal-900 text-3xl md:text-4xl leading-tight">
@@ -178,7 +182,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-white py-10 px-12 border border-eaa-warm-200">
+          <div className="bg-white py-8 px-6 sm:py-10 sm:px-12 border border-eaa-warm-200">
             <h3 className="font-serif text-2xl text-eaa-teal-900 mb-6">{siteContent.theSyllabus.topicsTitle}</h3>
             <ul className="grid md:grid-cols-2 gap-x-12 gap-y-4 list-disc marker:text-eaa-bronze-500 pl-6">
               {siteContent.theSyllabus.topics.map((topic, i) => (
@@ -411,7 +415,7 @@ export default function App() {
       </main>
       
       {/* Sticky mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-eaa-warm-200 px-4 py-3">
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-eaa-warm-200 px-4 py-3 safe-bottom">
         <a
           href={siteContent.links.applyForm}
           target="_blank"
@@ -424,7 +428,7 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-eaa-neutral-700 text-eaa-neutral-200 text-base md:text-lg">
+      <footer className="bg-eaa-neutral-700 text-eaa-neutral-200 text-base md:text-lg pb-16 md:pb-0">
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {/* Left column: Logo + legal */}

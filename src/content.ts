@@ -27,7 +27,7 @@ export const siteContent = {
     citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
     citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
-    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through."
+    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The Intro to EA Fellowship is six weeks of structured space to think it through, with people asking the same questions."
   },
   theSyllabus: {
     title: "The syllabus",
