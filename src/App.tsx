@@ -21,24 +21,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-eaa-warm-100 font-sans text-eaa-neutral-950 selection:bg-eaa-teal-900 selection:text-white">
-      {/* Navigation */}
-      <header className="w-full bg-eaa-warm-50 relative z-50">
-        <nav className="max-w-7xl mx-auto px-6 lg:px-16 py-4 flex justify-between items-center">
+      {/* Navigation - transparent overlay on hero */}
+      <header className="absolute top-0 left-0 w-full z-50">
+        <nav className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
           <div className="flex items-center">
             <a href={siteContent.links.mainWebsite} target="_blank" rel="noopener noreferrer">
-              <img 
-                src={logoFullColour} 
-                alt="Effective Altruism Australia" 
-                className="h-12 md:h-14"
+              <img
+                src={logoWhite}
+                alt="Effective Altruism Australia"
+                className="h-10 md:h-12"
               />
             </a>
           </div>
           <div>
-            <a 
-              href={siteContent.links.applyForm} 
-              target="_blank" 
+            <a
+              href={siteContent.links.applyForm}
+              target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-6 py-2.5 text-base font-medium hover:bg-eaa-teal-900 transition-colors duration-200 shadow-sm"
+              className="hidden md:inline-flex items-center justify-center gap-2 bg-white/15 backdrop-blur-sm text-white border border-white/25 px-6 py-2.5 text-base font-medium hover:bg-white/25 transition-colors duration-200"
             >
               {siteContent.navigation.applyButton}
               <ArrowRight className="w-4 h-4" />
@@ -48,55 +48,61 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[85vh] flex items-center py-16 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-eaa-warm-100">
-          <img 
-            src={photo0234} 
-            alt="Contemplative person" 
-            className="absolute right-0 top-0 h-full w-full md:w-[85%] lg:w-[75%] xl:w-[65%] object-cover object-center opacity-30 md:opacity-60 lg:opacity-80 grayscale-[0.6]"
-            style={{ 
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)',
-              maskImage: 'linear-gradient(to right, transparent, black 20%)'
+      <section className="relative w-full min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden">
+        {/* Teal background base */}
+        <div className="absolute inset-0 z-0 bg-[#145565]"></div>
+
+        {/* Photo anchored to the right, covering right 75% on desktop */}
+        <div className="absolute inset-0 z-[1] overflow-hidden">
+          <img
+            src={photo0234}
+            alt="Contemplative person at an event"
+            className="absolute right-0 top-0 h-full w-full md:w-[80%] lg:w-[70%] object-cover object-center"
+            style={{
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
+              maskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
             }}
           />
-          {/* Gradient to ensure text readability on the left and blend with background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-eaa-warm-100 from-40% md:from-30% lg:from-20% via-eaa-warm-100/60 to-transparent w-full"></div>
+          {/* Teal wash over photo */}
+          <div className="absolute inset-0 bg-[#145565]/35"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full">
-          <motion.div 
+        {/* Text content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full pt-28 pb-16 md:pt-20 md:pb-16">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-3xl"
+            className="max-w-sm md:max-w-md"
           >
-            {/* Staggered text blocks mimicking the social post */}
-            <div className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-none text-white tracking-tight flex flex-col items-start">
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[0]}</span>
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[1]}</span>
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2">{siteContent.hero.staggeredText[2]}</span>
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2 mb-6">{siteContent.hero.staggeredText[3]}</span>
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2 font-bold">{siteContent.hero.staggeredText[4]}</span>
-              <span className="bg-eaa-teal-900 px-4 pt-3 pb-2 font-bold">{siteContent.hero.staggeredText[5]}</span>
-            </div>
+            <h1 className="font-serif italic text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight mb-5">
+              What if
+            </h1>
 
-            <div className="mt-8 font-sans text-eaa-teal-900 font-medium text-lg md:text-xl max-w-xl">
-              <p className="mb-8 text-eaa-neutral-950 font-normal leading-relaxed">
-                {siteContent.hero.description}
-              </p>
-              <div className="flex flex-col gap-4">
-                <a 
-                  href={siteContent.links.applyForm} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-fit max-w-full inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-6 sm:px-8 py-4 text-base sm:text-lg font-medium hover:bg-eaa-teal-900 transition-colors duration-200 shadow-sm"
-                >
-                  {siteContent.hero.applyButton}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <p className="text-sm uppercase tracking-wider opacity-80">{siteContent.hero.closingDate}</p>
-              </div>
+            <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-[28px] leading-relaxed text-white/90 font-light mb-8">
+              you spent six weeks thinking about the<br />
+              <span className="relative inline-block px-2 py-0.5 font-normal">
+                <span className="absolute inset-0 bg-eaa-teal-700 -skew-x-3 rotate-[-1deg] rounded-[2px]" aria-hidden="true"></span>
+                <span className="relative">world's biggest</span>
+              </span><br />
+              <span className="relative inline-block px-2 py-0.5 font-normal">
+                <span className="absolute inset-0 bg-eaa-teal-700 skew-x-2 rotate-[0.6deg] rounded-[2px]" aria-hidden="true"></span>
+                <span className="relative">problems</span>
+              </span>{' '}
+              and<br />what you could do about them?
+            </p>
+
+            <div className="space-y-4">
+              <p className="text-white font-bold text-lg md:text-xl">Free 6-week fellowship</p>
+              <a
+                href={siteContent.links.applyForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-base font-medium hover:bg-eaa-teal-900 transition-colors duration-200"
+              >
+                Applications open
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
           </motion.div>
         </div>
