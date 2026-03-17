@@ -171,10 +171,19 @@ export default function App() {
           className="space-y-8 md:space-y-10"
         >
           <hr className="border-eaa-warm-200" />
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-8">
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
               <p>{siteContent.theSyllabus.description1}</p>
+              <a
+                href={siteContent.links.applyForm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-8 py-4 text-lg font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
+              >
+                {siteContent.navigation.applyButton}
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
@@ -219,7 +228,13 @@ export default function App() {
                 <div className="w-12 h-12 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center text-lg font-bold font-serif">
                   {item.step}
                 </div>
-                <h4 className="font-serif text-xl font-bold text-eaa-teal-900">{item.title}</h4>
+                <h4 className="font-serif text-xl font-bold text-eaa-teal-900">
+                  {item.step === 1 ? (
+                    <a href={siteContent.links.applyForm} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
+                      {item.title}
+                    </a>
+                  ) : item.title}
+                </h4>
                 <p>{item.desc}</p>
               </div>
             ))}
