@@ -35,6 +35,8 @@ export default function App() {
           </div>
           <div>
             <a
+              id="apply-nav"
+              data-action="apply-cta"
               href={siteContent.links.applyForm}
               target="_blank"
               rel="noopener noreferrer"
@@ -99,6 +101,8 @@ export default function App() {
             <div className="space-y-4">
               <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">Free 6-week fellowship</p>
               <a
+                id="apply-hero"
+                data-action="apply-cta"
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -176,6 +180,8 @@ export default function App() {
               <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.theSyllabus.title}</h2>
               <p>{siteContent.theSyllabus.description1}</p>
               <a
+                id="apply-syllabus"
+                data-action="apply-cta"
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -368,9 +374,11 @@ export default function App() {
               <h2 className="font-serif text-3xl md:text-5xl">{siteContent.finalCta.title}</h2>
             </div>
             <div className="flex flex-col items-center gap-6">
-              <a 
-                href={siteContent.links.applyForm} 
-                target="_blank" 
+              <a
+                id="apply-final-cta"
+                data-action="apply-cta"
+                href={siteContent.links.applyForm}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-eaa-warm-100 text-eaa-teal-700 px-10 py-5 text-xl font-bold hover:bg-white transition-colors duration-200 shadow-lg"
               >
@@ -435,6 +443,8 @@ export default function App() {
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-eaa-warm-200 px-4 py-3 safe-bottom">
         <a
+          id="apply-sticky-mobile"
+          data-action="apply-cta"
           href={siteContent.links.applyForm}
           target="_blank"
           rel="noopener noreferrer"
