@@ -16,6 +16,12 @@ import photo0129 from './assets/0129.jpg';
 import logoFullColour from './assets/logo-full-colour.svg';
 import logoWhite from './assets/logo-white.svg';
 
+const trackApplyClick = () => {
+  if (typeof window !== 'undefined' && (window as any).lintrk) {
+    (window as any).lintrk('track', { conversion_id: 24765572 });
+  }
+};
+
 export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -40,6 +46,7 @@ export default function App() {
               href={siteContent.links.applyForm}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackApplyClick}
               className="hidden md:inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-base font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
             >
               {siteContent.navigation.applyButton}
@@ -106,6 +113,7 @@ export default function App() {
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackApplyClick}
                 className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
               >
                 Applications open
@@ -185,6 +193,7 @@ export default function App() {
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackApplyClick}
                 className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-8 py-4 text-lg font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
               >
                 {siteContent.navigation.applyButton}
@@ -236,7 +245,7 @@ export default function App() {
                 </div>
                 <h4 className="font-serif text-xl font-bold text-eaa-teal-900">
                   {item.step === 1 ? (
-                    <a href={siteContent.links.applyForm} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
+                    <a href={siteContent.links.applyForm} target="_blank" rel="noopener noreferrer" onClick={trackApplyClick} className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
                       {item.title}
                     </a>
                   ) : item.title}
@@ -380,6 +389,7 @@ export default function App() {
                 href={siteContent.links.applyForm}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackApplyClick}
                 className="inline-flex items-center justify-center gap-2 bg-eaa-warm-100 text-eaa-teal-700 px-10 py-5 text-xl font-bold hover:bg-white transition-colors duration-200 shadow-lg"
               >
                 {siteContent.finalCta.applyButton}
@@ -448,6 +458,7 @@ export default function App() {
           href={siteContent.links.applyForm}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackApplyClick}
           className="flex items-center justify-center gap-2 w-full bg-eaa-teal-700 text-white py-3 text-base font-medium hover:bg-eaa-teal-900 transition-colors"
         >
           {siteContent.hero.applyButton}
