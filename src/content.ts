@@ -6,7 +6,7 @@ export const siteContent = {
     logoWhite: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-white.svg",
   },
   navigation: {
-    applyButton: "Apply for the Fellowship",
+    applyButton: "Apply for the Intro Course",
   },
   hero: {
     staggeredText: [
@@ -17,8 +17,8 @@ export const siteContent = {
       "And what you could",
       "do about them."
     ],
-    description: "The Intro to Effective Altruism Fellowship is a free 6-week program where you find the time to work through that question with a small group of curious people.",
-    applyButton: "Apply for the Fellowship",
+    description: "The Intro to Effective Altruism Course is a free 6-week program where you find the time to work through that question with a small group of curious people.",
+    applyButton: "Apply for the Intro Course",
     closingDate: "Applications close April 6",
   },
   theGap: {
@@ -27,7 +27,7 @@ export const siteContent = {
     citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
     citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
-    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The <strong>Intro to Effective Altruism Fellowship</strong> is six weeks of structured space to think it through, with people asking the same questions."
+    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The <strong>Intro to Effective Altruism Course</strong> is six weeks of structured space to think it through, with people asking the same questions."
   },
   whyEa: {
     title: "Why effective altruism?",
@@ -35,11 +35,11 @@ export const siteContent = {
       "Most of us want to make a difference. But how much of a difference can one person actually make?",
       "It turns out: a lot more than you think — if you're strategic about it. Some ways of doing good are literally a hundred times more effective than others. The best charities save lives for a fraction of what others spend. Career choices that seem similar can differ enormously in impact.",
       "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking that seriously — using evidence and careful thinking to find the best ways to help others, and then actually doing them. It's not an ideology. It's a question: given what we have, how do we do the most good?",
-      "The fellowship is where that question gets specific."
+      "The course is where that question gets specific."
     ]
   },
   theSyllabus: {
-    title: "What the EA Fellowship covers",
+    title: "What the EA Intro Course covers",
     description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by volunteer facilitators, and talk it through.",
     curriculumCreditHtml: "The syllabus draws on the <a href=\"https://www.effectivealtruism.org/courses/introductory-program\" target=\"_blank\" rel=\"noopener noreferrer\">Introductory EA Program</a>, a curriculum developed by the Centre for Effective Altruism and used by groups around the world.",
     topicsTitle: "What you'll explore:",
@@ -70,12 +70,12 @@ export const siteContent = {
     ]
   },
   testimonial: {
-    title: "What past fellows say",
-    quote: "I'd been thinking about these ideas for a while. The fellowship was an amazing place to meet other people, ask questions, and it gave me the confidence to dive into a career change.",
+    title: "What past participants say",
+    quote: "I'd been thinking about these ideas for a while. The course was an amazing place to meet other people, ask questions, and it gave me the confidence to dive into a career change.",
     citation: "— Kevin Rassool, Operations, Strategy & Community Building @ High Impact Athletes"
   },
   whatComesNext: {
-    title: "The fellowship is just the start.",
+    title: "The course is just the start.",
     items: [
       { title: "1:1 career advising", desc: "to talk through your options with someone who knows the landscape", link: "https://eaa.org.au/1-to-1" },
       { title: "EAGxAustralasia", desc: "our flagship annual conference for the effective altruism community in Australia and New Zealand" },
@@ -85,7 +85,7 @@ export const siteContent = {
   finalCta: {
     dateRange: "April 13 to May 20, 2026",
     title: "Six weeks could change how you think about doing good.",
-    applyButton: "Apply for the Fellowship",
+    applyButton: "Apply for the Intro Course",
     secondaryText: "Not sure yet?",
     secondaryLinkText: "Sign up for our newsletter →",
     secondaryLinkUrl: "https://eaa.org.au/newsletter"

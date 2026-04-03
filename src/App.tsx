@@ -20,6 +20,9 @@ const trackApplyClick = () => {
   if (typeof window !== 'undefined' && (window as any).lintrk) {
     (window as any).lintrk('track', { conversion_id: 24765572 });
   }
+  if (typeof window !== 'undefined' && (window as any).fbq) {
+    (window as any).fbq('track', 'Lead');
+  }
 };
 
 export default function App() {
@@ -106,7 +109,7 @@ export default function App() {
             </p>
 
             <div className="space-y-4">
-              <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">Free 6-week fellowship</p>
+              <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">Free 6-week intro course</p>
               <a
                 id="apply-hero"
                 data-action="apply-cta"
