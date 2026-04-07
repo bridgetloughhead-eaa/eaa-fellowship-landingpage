@@ -109,7 +109,7 @@ export default function App() {
             </p>
 
             <div className="space-y-4">
-              <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">Free 6-week intro course</p>
+              <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">{siteContent.hero.closingDate}</p>
               <a
                 id="apply-hero"
                 data-action="apply-cta"
@@ -117,9 +117,9 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackApplyClick}
-                className="inline-flex items-center justify-center gap-2 bg-eaa-teal-700 text-white px-7 py-3.5 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold hover:bg-eaa-teal-900 transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-7 py-3.5 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold hover:bg-white/10 transition-colors duration-200"
               >
-                Applications open
+                {siteContent.hero.applyButton}
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -247,11 +247,7 @@ export default function App() {
                   {item.step}
                 </div>
                 <h4 className="font-serif text-xl font-bold text-eaa-teal-900">
-                  {item.step === 1 ? (
-                    <a href={siteContent.links.applyForm} target="_blank" rel="noopener noreferrer" onClick={trackApplyClick} className="underline underline-offset-4 hover:text-eaa-teal-700 transition-colors">
-                      {item.title}
-                    </a>
-                  ) : item.title}
+                  {item.title}
                 </h4>
                 <p>{item.desc}</p>
               </div>

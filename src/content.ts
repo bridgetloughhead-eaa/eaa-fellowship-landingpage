@@ -1,12 +1,12 @@
 export const siteContent = {
   links: {
     mainWebsite: "https://effectivealtruism.org.au",
-    applyForm: "https://eaa.org.au/fellowship-form",
+    applyForm: "https://eaa.org.au/intro-course-eoi",
     logoFullColor: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-full-colour.svg",
     logoWhite: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-white.svg",
   },
   navigation: {
-    applyButton: "Apply for the Intro Course",
+    applyButton: "Register Interest for Next Round",
   },
   hero: {
     staggeredText: [
@@ -18,8 +18,8 @@ export const siteContent = {
       "do about them."
     ],
     description: "The Intro to Effective Altruism Course is a free 6-week program where you find the time to work through that question with a small group of curious people.",
-    applyButton: "Apply for the Intro Course",
-    closingDate: "Applications close April 6",
+    applyButton: "Register Interest for Next Round",
+    closingDate: "Applications for the April 2026 round have closed",
   },
   theGap: {
     quote: "The world is awful. The world is much better. The world can be much better.",
@@ -56,7 +56,7 @@ export const siteContent = {
   howItWorks: {
     title: "How it works",
     steps: [
-      { step: 1, title: "Apply", desc: "Tell us a bit about yourself and pick the times that work. Applications close April 6." },
+      { step: 1, title: "Register interest", desc: "Tell us a bit about yourself so we can let you know when the next round opens." },
       { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
       { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. April 13 to May 20. Free." }
     ],
@@ -83,10 +83,10 @@ export const siteContent = {
     ]
   },
   finalCta: {
-    dateRange: "April 13 to May 20, 2026",
+    dateRange: "Next round coming soon",
     title: "Six weeks could change how you think about doing good.",
-    applyButton: "Apply for the Intro Course",
-    secondaryText: "Not sure yet?",
+    applyButton: "Register Interest for the Next Round",
+    secondaryText: "Want updates?",
     secondaryLinkText: "Sign up for our newsletter →",
     secondaryLinkUrl: "https://eaa.org.au/newsletter"
   },
