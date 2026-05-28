@@ -6,7 +6,7 @@ export const siteContent = {
     logoWhite: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-white.svg",
   },
   navigation: {
-    applyButton: "Register Interest for Next Round",
+    applyButton: "Register interest for next round",
   },
   hero: {
     staggeredText: [
@@ -18,7 +18,7 @@ export const siteContent = {
       "do about them."
     ],
     description: "The Intro to Effective Altruism Course is a free 6-week program where you find the time to work through that question with a small group of curious people.",
-    applyButton: "Register Interest for Next Round",
+    applyButton: "Register interest for next round",
     closingDate: "Applications for the April 2026 round have closed",
   },
   theGap: {
@@ -85,7 +85,7 @@ export const siteContent = {
   finalCta: {
     dateRange: "Next round coming soon",
     title: "Six weeks could change how you think about doing good.",
-    applyButton: "Register Interest for the Next Round",
+    applyButton: "Register interest for next round",
     secondaryText: "Want updates?",
     secondaryLinkText: "Sign up for our newsletter →",
     secondaryLinkUrl: "https://eaa.org.au/newsletter"
