@@ -60,9 +60,9 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[55vh] md:min-h-[65vh] flex items-center overflow-hidden">
         {/* Teal background base */}
-        <div className="absolute inset-0 z-0 bg-[#145565]"></div>
+        <div className="absolute inset-0 z-0 bg-eaa-teal-900"></div>
 
         {/* Photo anchored to the right, covering right 75% on desktop */}
         <div className="absolute inset-0 z-[1] overflow-hidden">
@@ -76,11 +76,11 @@ export default function App() {
             }}
           />
           {/* Teal wash over photo */}
-          <div className="absolute inset-0 bg-[#145565]/55 md:bg-[#145565]/35"></div>
+          <div className="absolute inset-0 bg-eaa-teal-900/55 md:bg-eaa-teal-900/35"></div>
         </div>
 
         {/* Text content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full pt-12 pb-16 md:pt-16 md:pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full pt-10 pb-12 md:pt-12 md:pb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,6 +110,7 @@ export default function App() {
 
             <div className="space-y-4">
               <p className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-[29px]">{siteContent.hero.closingDate}</p>
+              <p className="text-white/80 text-base sm:text-lg md:text-xl">{siteContent.hero.applyNote}</p>
               <a
                 id="apply-hero"
                 data-action="apply-cta"
@@ -117,7 +118,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackApplyClick}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-7 py-3.5 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold hover:bg-white/10 transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-white text-eaa-teal-900 px-8 py-4 text-lg sm:text-xl md:text-2xl lg:text-[29px] font-bold shadow-lg hover:bg-eaa-warm-100 transition-colors duration-200"
               >
                 {siteContent.hero.applyButton}
                 <ArrowRight className="w-5 h-5" />
@@ -127,16 +128,29 @@ export default function App() {
         </div>
       </section>
 
+      {/* Quick facts strip */}
+      <section className="bg-white border-b border-eaa-warm-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-eaa-teal-900 font-bold text-base md:text-lg">
+          {siteContent.quickFacts.map((fact, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && <span className="text-eaa-bronze-500" aria-hidden="true">·</span>}
+              <span>{fact}</span>
+            </React.Fragment>
+          ))}
+        </div>
+      </section>
+
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 lg:px-16 py-12 md:py-20 space-y-12 md:space-y-20 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
+      <main>
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-12 md:py-20 space-y-12 md:space-y-20 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
         
-        {/* The Gap Section */}
-        <motion.section 
+        {/* Why EA / intro Section */}
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-8 md:space-y-10"
         >
           <blockquote className="relative pl-8 md:pl-12 border-l-2 border-eaa-bronze-500">
             <Quote className="absolute left-0 -top-1 w-6 h-6 text-eaa-bronze-500 opacity-20 scale-x-[-1]" />
@@ -154,22 +168,6 @@ export default function App() {
             </cite>
           </blockquote>
 
-          <div
-            className="space-y-6"
-            dangerouslySetInnerHTML={{ __html: `<p>${siteContent.theGap.paragraphHtml}</p>` }}
-          />
-        </motion.section>
-
-        {/* Why EA Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8 md:space-y-10"
-        >
-          <hr className="border-eaa-warm-200" />
-          <h2 className="font-serif text-3xl md:text-4xl text-eaa-teal-900">{siteContent.whyEa.title}</h2>
           <div className="space-y-6 [&_a]:underline [&_a]:underline-offset-4 [&_a]:text-eaa-teal-900 [&_a]:hover:text-eaa-teal-700 [&_a]:transition-colors">
             {siteContent.whyEa.paragraphs.map((p, i) => (
               <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
@@ -228,6 +226,28 @@ export default function App() {
             <p>{siteContent.theSyllabus.description2}</p>
           </div>
         </motion.section>
+
+      </div>
+
+      {/* More Testimonials Banner - full width */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="bg-eaa-teal-900 text-white px-6 lg:px-16 py-12 md:py-16 grid md:grid-cols-3 gap-8 md:gap-12 max-w-none">
+          {siteContent.moreTestimonials.map((t, i) => (
+            <div key={i} className="relative pl-8 border-l border-white/20 space-y-4">
+              <Quote className="absolute left-0 top-0 w-6 h-6 text-white opacity-20 scale-x-[-1]" />
+              <p className="font-serif italic text-lg leading-snug">{t.quote}</p>
+              <cite className="block text-sm font-sans not-italic uppercase tracking-widest text-white/60">{t.citation}</cite>
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-12 md:py-20 space-y-12 md:space-y-20 text-lg md:text-xl leading-relaxed text-eaa-neutral-950">
 
         {/* How It Works Section */}
         <motion.section
@@ -416,14 +436,20 @@ export default function App() {
               <div key={i} className="border border-eaa-warm-200 bg-white overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-button-${i}`}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-eaa-warm-50 transition-colors"
                 >
                   <span className="font-serif text-xl text-eaa-teal-900">{faq.q}</span>
-                  {openFaq === i ? <Minus className="w-5 h-5 text-eaa-bronze-500" /> : <Plus className="w-5 h-5 text-eaa-bronze-500" />}
+                  {openFaq === i ? <Minus className="w-5 h-5 text-eaa-bronze-500 shrink-0" aria-hidden="true" /> : <Plus className="w-5 h-5 text-eaa-bronze-500 shrink-0" aria-hidden="true" />}
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (
                     <motion.div
+                      id={`faq-panel-${i}`}
+                      role="region"
+                      aria-labelledby={`faq-button-${i}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -447,8 +473,9 @@ export default function App() {
           </a>
         </p>
 
+      </div>
       </main>
-      
+
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-eaa-warm-200 px-4 py-3 safe-bottom">
         <a

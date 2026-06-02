@@ -1,12 +1,12 @@
 export const siteContent = {
   links: {
     mainWebsite: "https://effectivealtruism.org.au",
-    applyForm: "https://eaa.org.au/intro-course-eoi",
+    applyForm: "https://forms.gle/31vLBvQA9g4KQmYS7",
     logoFullColor: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-full-colour.svg",
     logoWhite: "https://effective-altruism-australia.github.io/design-guidelines/large-logo-white.svg",
   },
   navigation: {
-    applyButton: "Register interest for next round",
+    applyButton: "Apply now",
   },
   hero: {
     staggeredText: [
@@ -18,47 +18,48 @@ export const siteContent = {
       "do about them."
     ],
     description: "The Intro to Effective Altruism Course is a free 6-week program where you find the time to work through that question with a small group of curious people.",
-    applyButton: "Register interest for next round",
-    closingDate: "Applications for the April 2026 round have closed",
+    applyButton: "Apply now",
+    closingDate: "Applications close Monday 13 July 2026",
+    applyNote: "Apply early to secure your preferred time slot.",
   },
+  quickFacts: ["Free", "6 weeks, 20 July – 29 August", "1.5hr a week + 1hr readings", "Online with some in-person options"],
   theGap: {
     quote: "The world is awful. The world is much better. The world can be much better.",
     citationAuthor: "Max Roser",
     citationTitle: "\"The world is awful. The world is much better. The world can be much better.\"",
     citationSource: "Our World in Data",
     citationLink: "https://ourworldindata.org/much-better-awful-can-be-better",
-    paragraphHtml: "Every day there's another headline: poverty, climate change, pandemics, AI. But at the same time, incredible progress is being made. Diseases are being eradicated. Billions of people have been lifted out of extreme poverty. Scientists, donors and policymakers are solving problems that seemed impossible a generation ago.</p><p>So where does that leave you? Somewhere between caring deeply and not knowing where to start. That's a hard place to be, and it's hard to find the time and space to really think it through.</p><p>The <strong>Intro to Effective Altruism Course</strong> is six weeks of structured space to think it through, with people asking the same questions."
   },
   whyEa: {
     title: "Why effective altruism?",
     paragraphs: [
-      "Most of us want to make a difference. But how much of a difference can one person actually make?",
-      "It turns out: a lot more than you think — if you're strategic about it. Some ways of doing good are literally a hundred times more effective than others. The best charities save lives for a fraction of what others spend. Career choices that seem similar can differ enormously in impact.",
-      "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking that seriously — using evidence and careful thinking to find the best ways to help others, and then actually doing them. It's not an ideology. It's a question: given what we have, how do we do the most good?",
-      "The course is where that question gets specific."
+      "If the world can be much better, how do we get there? It's hard to know where to start.",
+      "Many of us devote our career, time or money to causes we care about, but it is hard to know whether that effort goes as far as it could. We rarely get clear information to compare our options. When we do, the differences can be surprisingly large. They depend on where an opportunity happens to be, rather than how much people care.",
+      "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking this line of thinking seriously, using evidence and careful reasoning to find ways to help others as much as we can, and then acting on them. At its core it is a question: how do we do more good?",
+      "The Intro to Effective Altruism Course is six weeks set aside to explore that question properly, alongside a small group of people working through the same ideas."
     ]
   },
   theSyllabus: {
     title: "What the EA Intro Course covers",
     description1: "Each week for six weeks, you explore a different way of thinking about how to do good. You read a curated piece, meet your small group led by volunteer facilitators, and talk it through.",
     curriculumCreditHtml: "The syllabus draws on the <a href=\"https://www.effectivealtruism.org/courses/introductory-program\" target=\"_blank\" rel=\"noopener noreferrer\">Introductory EA Program</a>, a curriculum developed by the Centre for Effective Altruism and used by groups around the world.",
-    topicsTitle: "What you'll explore:",
+    topicsTitle: "Questions you'll explore:",
     topics: [
-      "Why some ways of doing good are 100x more effective than others",
-      "Global health and where money saves the most lives",
-      "Animal welfare and the scale of suffering we rarely talk about",
-      "Existential risks and the long-term future",
-      "AI and what it means for humanity's biggest challenges",
-      "Your career, your donations, your time: where do they count?"
+      "How much more good can the best options do?",
+      "Where does a donation save the most lives?",
+      "How much should we care about animal suffering?",
+      "What do we owe future generations?",
+      "What could AI mean for humanity?",
+      "How far can your career and giving go?"
     ],
     description2: "No background knowledge needed. Just bring the questions you already have."
   },
   howItWorks: {
     title: "How it works",
     steps: [
-      { step: 1, title: "Register interest", desc: "Tell us a bit about yourself so we can let you know when the next round opens." },
+      { step: 1, title: "Apply", desc: "Fill out the short application form — it only takes a few minutes." },
       { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
-      { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. April 13 to May 20. Free." }
+      { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. 20 July to 29 August. Free." }
     ],
     note: ""
   },
@@ -74,18 +75,32 @@ export const siteContent = {
     quote: "I'd been thinking about these ideas for a while. The course was an amazing place to meet other people, ask questions, and it gave me the confidence to dive into a career change.",
     citation: "— Kevin Rassool, Operations, Strategy & Community Building @ High Impact Athletes"
   },
+  moreTestimonials: [
+    {
+      quote: "The thoughts I'm having in my spare time are actually worth pursuing... getting in touch with EA will help me get a broader reach for these ideas.",
+      citation: "— Cameron, 2026 course participant"
+    },
+    {
+      quote: "The course has opened my eyes to what altruism means to many people. It isn't one thing... it has provided tools I can use to support my arguments. I am keen to start.",
+      citation: "— Liz, 2026 course participant"
+    },
+    {
+      quote: "I was wanting to change my career to something more meaningful... this clarified that into wanting to do something meaningful and effective.",
+      citation: "— Andrew, 2026 course participant"
+    }
+  ],
   whatComesNext: {
     title: "The course is just the start.",
     items: [
       { title: "1:1 career advising", desc: "to talk through your options with someone who knows the landscape", link: "https://eaa.org.au/1-to-1" },
-      { title: "EAGxAustralasia", desc: "our flagship annual conference for the effective altruism community in Australia and New Zealand" },
+      { title: "EAGxAustralasia", desc: "our flagship annual conference for the effective altruism community in Australia and New Zealand. 27–29 November, Melbourne.", link: "http://eaa.org.au/eagx" },
       { title: "Local events and meetups", desc: "to keep the conversation going in your city", link: "https://effectivealtruism.org.au/get-involved/local-community/" }
     ]
   },
   finalCta: {
-    dateRange: "Next round coming soon",
+    dateRange: "Course runs 20 July – 29 August 2026 · Applications close Monday 13 July",
     title: "Six weeks could change how you think about doing good.",
-    applyButton: "Register interest for next round",
+    applyButton: "Apply now",
     secondaryText: "Want updates?",
     secondaryLinkText: "Sign up for our newsletter →",
     secondaryLinkUrl: "https://eaa.org.au/newsletter"
