@@ -58,7 +58,7 @@ export const siteContent = {
     title: "How it works",
     steps: [
       { step: 1, title: "Apply", desc: "Fill out the short application form — it only takes a few minutes." },
-      { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 in Melbourne, Sydney, Brisbane or online." },
+      { step: 2, title: "Get matched", desc: "We'll place you in a small group of 5-7 with an experienced facilitator." },
       { step: 3, title: "Show up", desc: "One 90-minute session a week, plus about an hour of reading. 20 July to 29 August. Free." }
     ],
     note: ""
