@@ -68,7 +68,7 @@ export default function App() {
         <div className="absolute inset-0 z-[1] overflow-hidden">
           <img
             src={photo0234}
-            alt="Contemplative person at an event"
+            alt="Participant at an Effective Altruism Australia event"
             className="absolute right-0 top-0 h-full w-full md:w-[80%] lg:w-[70%] object-cover object-[30%_center] md:object-center"
             style={{
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
@@ -88,6 +88,7 @@ export default function App() {
             className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
           >
             <h1 className="font-serif font-bold italic text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight mb-5">
+              <span className="sr-only">Intro to Effective Altruism Course. </span>
               What if
             </h1>
 
@@ -204,7 +205,7 @@ export default function App() {
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photo0221} 
-                alt="Group discussion" 
+                alt="Small group discussion at an Intro to Effective Altruism Course session" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
             </div>
@@ -266,9 +267,9 @@ export default function App() {
                 <div className="w-12 h-12 rounded-full bg-eaa-teal-900 text-white flex items-center justify-center text-lg font-bold font-serif">
                   {item.step}
                 </div>
-                <h4 className="font-serif text-xl font-bold text-eaa-teal-900">
+                <h3 className="font-serif text-xl font-bold text-eaa-teal-900">
                   {item.title}
-                </h4>
+                </h3>
                 <p>{item.desc}</p>
               </div>
             ))}
@@ -323,7 +324,7 @@ export default function App() {
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photoKevin} 
-                alt="Kevin Rassool" 
+                alt="Kevin Rassool, past Intro to Effective Altruism Course participant" 
                 className="w-full h-full object-cover grayscale-[0.3]"
                 onError={(e) => {
                   // Fallback if kevin.jpg doesn't exist
@@ -382,7 +383,7 @@ export default function App() {
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200 order-1 md:order-2">
               <img 
                 src={photo0129} 
-                alt="Community event" 
+                alt="Participants at an Effective Altruism Australia community event" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
             </div>

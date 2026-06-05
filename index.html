@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Join the free 6-week Intro to Effective Altruism Course. Explore how to do the most good through weekly readings and small group discussions. 20 July to 29 August 2026." />
+    <meta name="description" content="Join the free 6-week Intro to Effective Altruism Course. Explore how to do the most good through readings and small-group discussions. Starts 20 July 2026." />
     <meta property="og:title" content="Intro to Effective Altruism Course | EAA" />
     <meta property="og:description" content="A free 6-week program to explore how you can do the most good. Weekly readings, small group discussions. 20 July to 29 August 2026." />
     <meta property="og:image" content="https://introcourse.eaa.org.au/og-image.png" />
@@ -14,7 +14,58 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://introcourse.eaa.org.au/og-image.png" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href="https://introcourse.eaa.org.au/" />
     <title>Intro to Effective Altruism Course | EAA</title>
+
+    <!-- Structured data: Organization + Course -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://effectivealtruism.org.au/#organization",
+          "name": "Effective Altruism Australia",
+          "url": "https://effectivealtruism.org.au",
+          "logo": "https://effective-altruism-australia.github.io/design-guidelines/large-logo-full-colour.svg",
+          "sameAs": [
+            "https://au.linkedin.com/company/effective-altruism-australia",
+            "https://www.facebook.com/effectivealtruismaustralia",
+            "https://www.youtube.com/channel/UCB7RsmYLb7QhsxIGISsqnew",
+            "https://twitter.com/EA_Aus"
+          ]
+        },
+        {
+          "@type": "Course",
+          "name": "Intro to Effective Altruism Course",
+          "url": "https://introcourse.eaa.org.au/",
+          "description": "A free 6-week program to explore how to do the most good, through weekly readings and small-group discussions.",
+          "provider": { "@id": "https://effectivealtruism.org.au/#organization" },
+          "isAccessibleForFree": true,
+          "inLanguage": "en-AU",
+          "offers": {
+            "@type": "Offer",
+            "category": "Free",
+            "price": "0",
+            "priceCurrency": "AUD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://introcourse.eaa.org.au/"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "blended",
+            "startDate": "2026-07-20",
+            "endDate": "2026-08-29",
+            "courseWorkload": "PT2H30M",
+            "location": {
+              "@type": "VirtualLocation",
+              "url": "https://introcourse.eaa.org.au/"
+            }
+          }
+        }
+      ]
+    }
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-939CTW3H2X"></script>
     <script>

@@ -142,7 +142,7 @@ export const siteContent = {
       { label: "Other Ways to Donate", url: "https://effectivealtruism.org.au/other-ways-to-donate/" },
       { label: "Best Charities", url: "https://effectivealtruism.org.au/best-charities/" },
       { label: "Get Involved", url: "https://effectivealtruism.org.au/get-involved/" },
-      { label: "Learn More", url: "https://effectivealtruism.org.au/latest-news-and-resources/" },
+      { label: "Latest News & Resources", url: "https://effectivealtruism.org.au/latest-news-and-resources/" },
       { label: "About Us", url: "https://effectivealtruism.org.au/about-us/" },
       { label: "Contact Us", url: "https://effectivealtruism.org.au/contact/" },
     ],
