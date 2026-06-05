@@ -7,12 +7,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, MapPin, Quote, Plus, Minus, Mail, Phone } from 'lucide-react';
 import { siteContent } from './content';
-import photo0234 from './assets/0234.jpg';
-import awfulBetter from './assets/awful-better.png';
-import photo0221 from './assets/0221.jpg';
-import photoKevin from './assets/kevin.png';
-import photo0086 from './assets/0086.jpg';
-import photo0129 from './assets/0129.jpg';
+import photo0234 from './assets/0234.webp';
+import photo0221 from './assets/0221.webp';
+import photoKevin from './assets/kevin.webp';
+import photo0086 from './assets/0086.webp';
+import photo0129 from './assets/0129.webp';
 import logoFullColour from './assets/logo-full-colour.svg';
 import logoWhite from './assets/logo-white.svg';
 
@@ -69,6 +68,11 @@ export default function App() {
           <img
             src={photo0234}
             alt="Participant at an Effective Altruism Australia event"
+            width={1920}
+            height={1280}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="absolute right-0 top-0 h-full w-full md:w-[80%] lg:w-[70%] object-cover object-[30%_center] md:object-center"
             style={{
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
@@ -205,7 +209,11 @@ export default function App() {
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photo0221} 
-                alt="Small group discussion at an Intro to Effective Altruism Course session" 
+                alt="Small group discussion at an Intro to Effective Altruism Course session"
+                width={1600}
+                height={1067}
+                loading="lazy"
+                decoding="async" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
             </div>
@@ -324,7 +332,11 @@ export default function App() {
             <div className="aspect-square overflow-hidden bg-eaa-warm-200">
               <img 
                 src={photoKevin} 
-                alt="Kevin Rassool, past Intro to Effective Altruism Course participant" 
+                alt="Kevin Rassool, past Intro to Effective Altruism Course participant"
+                width={500}
+                height={500}
+                loading="lazy"
+                decoding="async" 
                 className="w-full h-full object-cover grayscale-[0.3]"
                 onError={(e) => {
                   // Fallback if kevin.jpg doesn't exist
@@ -383,7 +395,11 @@ export default function App() {
             <div className="aspect-[4/3] overflow-hidden bg-eaa-warm-200 order-1 md:order-2">
               <img 
                 src={photo0129} 
-                alt="Participants at an Effective Altruism Australia community event" 
+                alt="Participants at an Effective Altruism Australia community event"
+                width={1600}
+                height={1067}
+                loading="lazy"
+                decoding="async" 
                 className="w-full h-full object-cover grayscale-[0.3]"
               />
             </div>
