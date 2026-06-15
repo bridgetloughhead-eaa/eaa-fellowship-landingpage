@@ -15,14 +15,14 @@ import photo0129 from './assets/0129.webp';
 import logoFullColour from './assets/logo-full-colour.svg';
 import logoWhite from './assets/logo-white.svg';
 
-const trackApplyClick = () => {
-  if (typeof window !== 'undefined' && (window as any).lintrk) {
-    (window as any).lintrk('track', { conversion_id: 26465604 });
-  }
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Lead');
-  }
-};
+// Apply-click conversion tracking removed 2026-06-15.
+// - The LinkedIn click conversion (26465604) is retired in favour of the server-side
+//   form-submit conversion (26741596), which counts completed applications.
+// - The fbq('track','Lead') here fired on click and double-counted the server-side
+//   submit Lead (matters once Meta ads run).
+// Kept as a no-op so the existing onClick={trackApplyClick} bindings stay valid; the Apply
+// buttons still open the application form via their href (target="_blank").
+const trackApplyClick = () => {};
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
