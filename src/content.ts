@@ -35,7 +35,7 @@ export const siteContent = {
     paragraphs: [
       "If the world can be much better, how do we get there? It's hard to know where to start.",
       "Many of us devote our career, time or money to causes we care about, but it is hard to know whether that effort goes as far as it could. We rarely get clear information to compare our options. When we do, the differences can be surprisingly large. They depend on where an opportunity happens to be, rather than how much people care.",
-      "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking this line of thinking seriously, using evidence and careful reasoning to find ways to help others as much as we can, and then acting on them. At its core it is a question: how do we do more good?",
+      "<a href=\"https://www.effectivealtruism.org/articles/introduction-to-effective-altruism\" target=\"_blank\" rel=\"noopener noreferrer\">Effective altruism</a> is the practice of taking this line of thinking seriously, using evidence and careful reasoning to find ways to help others as much as we can, and then acting on them. At its core it is a question: how can we do more good?",
       "The Intro to Effective Altruism Course is six weeks set aside to explore that question properly, alongside a small group of people working through the same ideas."
     ]
   },
