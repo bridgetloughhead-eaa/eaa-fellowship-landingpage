@@ -115,6 +115,10 @@
         border-radius: 10px;
         overflow: hidden;
         background: #fff;
+        /* Break out of the text column so the PDF gets more width */
+        width: min(1200px, 96vw);
+        margin-left: 50%;
+        transform: translateX(-50%);
       }
 
       .viewer iframe {
