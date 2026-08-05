@@ -12,9 +12,24 @@
     })(window,document,'script','dataLayer','GTM-NSL9RMVW');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- ═══════════════════════════════════════════════════════════════════
+         META DESCRIPTIONS: ONE OF THE TWO BLOCKS BELOW IS ACTIVE.
+         Currently active: BETWEEN ROUNDS. See SWITCHING.md in the repo root.
+         ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- vvv ACTIVE: BETWEEN ROUNDS (applications closed) vvv -->
+    <meta name="description" content="The Intro to Effective Altruism Course is a free 6-week program from Effective Altruism Australia. Applications are closed. The next round opens in early 2027 - join the newsletter to hear when." />
+    <meta property="og:title" content="Intro to Effective Altruism Course | EAA" />
+    <meta property="og:description" content="Applications are closed. The next round of this free 6-week program opens in early 2027. Join the newsletter to hear when." />
+    <!-- ^^^ END BETWEEN ROUNDS ^^^ -->
+
+    <!-- vvv INACTIVE: APPLY ROUND - uncomment this block and comment out the one
+         above when applications reopen. Update the dates first. vvv
     <meta name="description" content="Join the free 6-week Intro to Effective Altruism Course. Explore how to do the most good through readings and small-group discussions. Starts 20 July 2026." />
     <meta property="og:title" content="Intro to Effective Altruism Course | EAA" />
     <meta property="og:description" content="A free 6-week program to explore how you can do the most good. Weekly readings, small group discussions. 20 July to 29 August 2026." />
+         ^^^ END APPLY ROUND ^^^ -->
+
     <meta property="og:image" content="https://introcourse.eaa.org.au/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -26,7 +41,47 @@
     <link rel="canonical" href="https://introcourse.eaa.org.au/" />
     <title>Intro to Effective Altruism Course | EAA</title>
 
-    <!-- Structured data: Organization + Course -->
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STRUCTURED DATA: ONE OF THE TWO BLOCKS BELOW IS ACTIVE.
+         Currently active: BETWEEN ROUNDS. See SWITCHING.md in the repo root.
+         The between-rounds version drops hasCourseInstance and the InStock
+         availability so Google stops advertising a course that has finished.
+         ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- vvv ACTIVE: BETWEEN ROUNDS (applications closed) vvv -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://effectivealtruism.org.au/#organization",
+          "name": "Effective Altruism Australia",
+          "url": "https://effectivealtruism.org.au",
+          "logo": "https://effective-altruism-australia.github.io/design-guidelines/large-logo-full-colour.svg",
+          "sameAs": [
+            "https://au.linkedin.com/company/effective-altruism-australia",
+            "https://www.facebook.com/effectivealtruismaustralia",
+            "https://www.youtube.com/channel/UCB7RsmYLb7QhsxIGISsqnew",
+            "https://twitter.com/EA_Aus"
+          ]
+        },
+        {
+          "@type": "Course",
+          "name": "Intro to Effective Altruism Course",
+          "url": "https://introcourse.eaa.org.au/",
+          "description": "A free 6-week program to explore how to do the most good, through weekly readings and small-group discussions. Applications are currently closed; the next round opens in early 2027.",
+          "provider": { "@id": "https://effectivealtruism.org.au/#organization" },
+          "isAccessibleForFree": true,
+          "inLanguage": "en-AU"
+        }
+      ]
+    }
+    </script>
+    <!-- ^^^ END BETWEEN ROUNDS ^^^ -->
+
+    <!-- vvv INACTIVE: APPLY ROUND - uncomment this block and comment out the one
+         above when applications reopen. Update startDate and endDate first. vvv
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,6 +130,8 @@
       ]
     }
     </script>
+         ^^^ END APPLY ROUND ^^^ -->
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-939CTW3H2X"></script>
     <script>

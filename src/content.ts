@@ -1,3 +1,94 @@
+// ─────────────────────────────────────────────────────────────────────────────
+//  APPLICATIONS OPEN / CLOSED
+//
+//  false → the site shows the "between rounds" page (newsletter + EAGx).
+//  true  → the site shows the full "Apply now" page.
+//
+//  To turn applications back on for the next round, see SWITCHING.md in the
+//  repo root. It is a three-step change: this flag, the dates in siteContent
+//  below, and one commented block in index.html.
+// ─────────────────────────────────────────────────────────────────────────────
+export const courseOpen = false;
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  BETWEEN-ROUNDS PAGE CONTENT
+//  Shown when courseOpen === false. Sections it does not define (the syllabus
+//  topics, testimonials, "who's behind this", the footer) are reused from
+//  siteContent below, so those only need editing in one place.
+// ─────────────────────────────────────────────────────────────────────────────
+export const betweenRounds = {
+  links: {
+    newsletter: "https://eaa.org.au/newsletter",
+    eagx: "https://effectivealtruism.org.au/get-involved/eagx/?utm_source=introcourse&utm_medium=referral&utm_campaign=eagx26&utm_content=between_rounds",
+    careerAdvising: "https://eaa.org.au/1-to-1",
+    localCommunity: "https://effectivealtruism.org.au/get-involved/local-community/",
+    bestCharities: "https://effectivealtruism.org.au/best-charities/",
+  },
+  navigation: {
+    newsletterButton: "Get course updates",
+  },
+  hero: {
+    // The hero headline itself ("What if you spent six weeks...") is markup in
+    // BetweenRoundsPage.tsx, matching ApplyPage.tsx. Only the status line below
+    // it differs between the two states.
+    statusLine: "The next round opens in early 2027",
+    note: "We'll email you when applications open.",
+    primaryButton: "Get course updates",
+    secondaryLinkText: "Explore Effective Altruism Australia",
+  },
+  statusStrip: [
+    "Applications closed",
+    "Next round: early 2027",
+    "Free",
+    "6 weeks",
+    "Online with some in-person options",
+  ],
+  eagx: {
+    eyebrow: "Happening this year",
+    title: "EAGxAustralasia 2026",
+    body: "Three days with people working out how to do more good, and what to do about it. Talks, workshops and one-on-ones with people working on the problems this course covers.",
+    details: "27 to 29 November · Melbourne Connect, Melbourne",
+    button: "Learn more",
+  },
+  inTheMeantime: {
+    title: "In the meantime",
+    items: [
+      {
+        title: "Best charities",
+        desc: "where a donation goes furthest, and the evidence behind each one.",
+        linkKey: "bestCharities" as const,
+      },
+      {
+        title: "1:1 career advising",
+        desc: "talk through your options with someone who knows the landscape.",
+        linkKey: "careerAdvising" as const,
+      },
+      {
+        title: "Local events and meetups",
+        desc: "keep the conversation going in your city.",
+        linkKey: "localCommunity" as const,
+      },
+    ],
+  },
+  // Plain-text version of siteContent.theSyllabus.curriculumCreditHtml. Keeps
+  // the attribution to CEA but without the link, so the between-rounds page
+  // doesn't send people off to the reading list. The apply page keeps its link.
+  syllabusCredit: "The syllabus draws on the Introductory EA Program, a curriculum developed by the Centre for Effective Altruism and used by groups around the world.",
+  finalCta: {
+    eyebrow: "Next round: early 2027",
+    title: "Be first to hear when applications open.",
+    body: "Join the Effective Altruism Australia newsletter and we'll let you know when the next round opens.",
+    button: "Join the newsletter",
+  },
+  // No FAQ on this page: with applications closed there is nothing to answer
+  // that the hero and the status strip don't already say.
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  APPLY-ROUND PAGE CONTENT
+//  Shown when courseOpen === true. Also supplies the shared sections used by
+//  the between-rounds page (syllabus, testimonials, who's behind this, footer).
+// ─────────────────────────────────────────────────────────────────────────────
 export const siteContent = {
   links: {
     mainWebsite: "https://effectivealtruism.org.au",
